@@ -22,7 +22,7 @@ transaction. In a more realistic setting we would also need constraints on the
 validity range of the forging transaction.
 
 -}
-module PlutusTx.Coordination.Contracts.Prism.STO(
+module Plutus.Contracts.Prism.STO(
     STOData(..)
     , policy
     , coins

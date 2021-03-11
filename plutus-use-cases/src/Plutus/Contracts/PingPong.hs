@@ -16,7 +16,7 @@
 {-# OPTIONS_GHC -fno-ignore-interface-pragmas #-}
 {-# OPTIONS -fplugin-opt PlutusTx.Plugin:debug-context #-}
 -- | A state machine with two states and two roles that take turns.
-module PlutusTx.Coordination.Contracts.PingPong(
+module Plutus.Contracts.PingPong(
     PingPongState(..),
     Input(..),
     PingPongError(..),

@@ -6,22 +6,22 @@ module Spec.TokenAccount(tests, assertAccountBalance, tokenAccountTrace) where
 
 import           Test.Tasty
 
-import           Control.Monad                                (void)
-import           Control.Monad.Freer                          (run)
-import           Control.Monad.Freer.Error                    (runError)
+import           Control.Monad                 (void)
+import           Control.Monad.Freer           (run)
+import           Control.Monad.Freer.Error     (runError)
 import qualified Ledger
-import qualified Ledger.Ada                                   as Ada
-import           Ledger.Value                                 (TokenName, Value)
-import           Plutus.Contract                              (Contract)
+import qualified Ledger.Ada                    as Ada
+import           Ledger.Value                  (TokenName, Value)
+import           Plutus.Contract               (Contract)
 import           Plutus.Contract.Test
-import qualified Streaming.Prelude                            as S
-import           Wallet.Emulator.Stream                       (foldEmulatorStreamM, takeUntilSlot)
+import qualified Streaming.Prelude             as S
+import           Wallet.Emulator.Stream        (foldEmulatorStreamM, takeUntilSlot)
 
-import qualified Plutus.Trace.Emulator                        as Trace
-import           PlutusTx.Coordination.Contracts.TokenAccount (Account (..), TokenAccountError, TokenAccountSchema,
-                                                               tokenAccountContract)
-import qualified PlutusTx.Coordination.Contracts.TokenAccount as Accounts
-import qualified Wallet.Emulator.Folds                        as Folds
+import           Plutus.Contracts.TokenAccount (Account (..), TokenAccountError, TokenAccountSchema,
+                                                tokenAccountContract)
+import qualified Plutus.Contracts.TokenAccount as Accounts
+import qualified Plutus.Trace.Emulator         as Trace
+import qualified Wallet.Emulator.Folds         as Folds
 
 tests :: TestTree
 tests = testGroup "token account"

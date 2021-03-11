@@ -6,25 +6,25 @@ module Dataset ( contractsWithNames
                ) where
 
 import           Control.Monad.Trans.Except
-import           Data.Bifunctor                               (second)
-import           Data.Either                                  (fromRight)
-import           Data.Text                                    (Text)
+import           Data.Bifunctor                (second)
+import           Data.Either                   (fromRight)
+import           Data.Text                     (Text)
 
-import qualified Language.Marlowe                             as Marlowe
-import qualified Ledger                                       as Ledger
-import qualified Ledger.Ada                                   as Ada
+import qualified Language.Marlowe              as Marlowe
+import qualified Ledger                        as Ledger
+import qualified Ledger.Ada                    as Ada
 import           Ledger.Crypto
-import qualified Ledger.Scripts                               as Plutus
-import qualified Ledger.Typed.Scripts                         as Plutus
+import qualified Ledger.Scripts                as Plutus
+import qualified Ledger.Typed.Scripts          as Plutus
 import           Ledger.Value
 import           Plutus.Contract.Trace
-import           PlutusCore                                   (DefaultFun (..), runQuoteT)
+import qualified Plutus.Contracts.Crowdfunding as Crowdfunding
+import qualified Plutus.Contracts.Escrow       as Escrow
+import qualified Plutus.Contracts.Future       as Future
+import qualified Plutus.Contracts.Game         as Game
+import qualified Plutus.Contracts.Vesting      as Vesting
+import           PlutusCore                    (DefaultFun (..), runQuoteT)
 import           PlutusCore.Universe
-import qualified PlutusTx.Coordination.Contracts.Crowdfunding as Crowdfunding
-import qualified PlutusTx.Coordination.Contracts.Escrow       as Escrow
-import qualified PlutusTx.Coordination.Contracts.Future       as Future
-import qualified PlutusTx.Coordination.Contracts.Game         as Game
-import qualified PlutusTx.Coordination.Contracts.Vesting      as Vesting
 import           UntypedPlutusCore
 
 wallet1, wallet2 :: Wallet

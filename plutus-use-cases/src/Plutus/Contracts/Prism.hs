@@ -37,7 +37,7 @@ that locks a specific credential token for a specific user, identified by their
 public key address.
 
 -}
-module PlutusTx.Coordination.Contracts.Prism(
+module Plutus.Contracts.Prism(
     -- * Unlock (STO)
     STOSubscriber(..)
     , STOSubscriberSchema
@@ -65,13 +65,13 @@ module PlutusTx.Coordination.Contracts.Prism(
     , contract
     ) where
 
-import           Data.Aeson                                              (FromJSON, ToJSON)
-import           GHC.Generics                                            (Generic)
-import           PlutusTx.Coordination.Contracts.Prism.Credential
-import           PlutusTx.Coordination.Contracts.Prism.CredentialManager
-import           PlutusTx.Coordination.Contracts.Prism.Mirror
-import           PlutusTx.Coordination.Contracts.Prism.StateMachine
-import           PlutusTx.Coordination.Contracts.Prism.Unlock
+import           Data.Aeson                               (FromJSON, ToJSON)
+import           GHC.Generics                             (Generic)
+import           Plutus.Contracts.Prism.Credential
+import           Plutus.Contracts.Prism.CredentialManager
+import           Plutus.Contracts.Prism.Mirror
+import           Plutus.Contracts.Prism.StateMachine
+import           Plutus.Contracts.Prism.Unlock
 
 import           Plutus.Contract
 

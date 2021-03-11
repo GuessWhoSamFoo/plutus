@@ -9,7 +9,7 @@
 {-# LANGUAGE ViewPatterns      #-}
 {-# OPTIONS_GHC -Wno-incomplete-uni-patterns #-}
 {-# OPTIONS_GHC -fno-ignore-interface-pragmas #-}
-module PlutusTx.Coordination.Contracts.Swap(
+module Plutus.Contracts.Swap(
     Swap(..),
     -- * Script
     swapValidator
@@ -44,7 +44,7 @@ data Swap = Swap
     , swapFixedRate       :: !Rational -- ^ Interest rate fixed at the beginning of the contract
     , swapFloatingRate    :: !Rational -- ^ Interest rate whose value will be observed (by an oracle) on the day of the payment
     , swapMargin          :: !Ada -- ^ Margin deposited at the beginning of the contract to protect against default (one party failing to pay)
-    , swapOracle          :: !PubKey -- ^ Public key of the oracle (see note [Oracles] in [[PlutusTx.Coordination.Contracts]])
+    , swapOracle          :: !PubKey -- ^ Public key of the oracle (see note [Oracles] in [[Plutus.Contracts]])
     }
 
 PlutusTx.makeLift ''Swap

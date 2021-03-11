@@ -14,7 +14,7 @@
 {-# LANGUAGE TypeOperators      #-}
 {-# OPTIONS_GHC -fno-ignore-interface-pragmas #-}
 {-# OPTIONS_GHC -fno-specialise #-}
-module PlutusTx.Coordination.Contracts.Vesting (
+module Plutus.Contracts.Vesting (
     -- $vesting
     VestingParams(..),
     VestingSchema,

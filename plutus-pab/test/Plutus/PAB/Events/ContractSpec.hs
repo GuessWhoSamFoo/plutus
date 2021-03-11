@@ -18,10 +18,10 @@ import           GHC.TypeLits                           (symbolVal)
 import           Plutus.Contract                        (BlockchainActions)
 import           Plutus.Contract.Effects.ExposeEndpoint (ActiveEndpoint (..), EndpointDescription (EndpointDescription))
 import qualified Plutus.Contract.Schema                 as Schema
+import           Plutus.Contracts.Game                  (GameSchema, game)
 import           Plutus.PAB.Arbitrary                   ()
 import           Plutus.PAB.ContractCLI                 (Command (Initialise), runCliCommand)
 import           Plutus.PAB.Events.Contract             (ContractHandlersResponse, PartiallyDecodedResponse)
-import           PlutusTx.Coordination.Contracts.Game   (GameSchema, game)
 import           Test.Tasty                             (TestTree, testGroup)
 import           Test.Tasty.HUnit                       (assertFailure, testCase)
 

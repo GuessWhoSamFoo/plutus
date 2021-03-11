@@ -45,11 +45,11 @@ import           Plutus.Contract.Effects.RPC                 (RPCClient)
 import           Plutus.Contract.Schema                      (Event, Handlers, Input, Output)
 import           Plutus.Contract.State                       (ContractRequest, ContractResponse (..))
 import qualified Plutus.Contract.State                       as ContractState
+import qualified Plutus.Contracts.Currency                   as Contracts.Currency
+import qualified Plutus.Contracts.Game                       as Contracts.Game
+import qualified Plutus.Contracts.RPC                        as Contracts.RPC
 import qualified Plutus.PAB.Effects.ContractTest.AtomicSwap  as Contracts.AtomicSwap
 import qualified Plutus.PAB.Effects.ContractTest.PayToWallet as Contracts.PayToWallet
-import qualified PlutusTx.Coordination.Contracts.Currency    as Contracts.Currency
-import qualified PlutusTx.Coordination.Contracts.Game        as Contracts.Game
-import qualified PlutusTx.Coordination.Contracts.RPC         as Contracts.RPC
 
 data TestContracts = Game | Currency | AtomicSwap | PayToWallet | RPCClient | RPCServer
     deriving (Eq, Ord, Show, Generic)

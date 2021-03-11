@@ -9,7 +9,7 @@
 {-# LANGUAGE TemplateHaskell    #-}
 {-# LANGUAGE TypeApplications   #-}
 {-# LANGUAGE TypeOperators      #-}
-module PlutusTx.Coordination.Contracts.Auction(
+module Plutus.Contracts.Auction(
     AuctionState(..),
     AuctionInput(..),
     BuyerSchema,

@@ -21,7 +21,7 @@
 --   * Uses a token to keep track of who is allowed to make a guess
 --
 
-module PlutusTx.Coordination.Contracts.GameStateMachine(
+module Plutus.Contracts.GameStateMachine(
     contract
     , scriptInstance
     , GameToken

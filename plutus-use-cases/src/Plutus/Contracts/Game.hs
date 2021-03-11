@@ -20,7 +20,7 @@
 {-# LANGUAGE ViewPatterns               #-}
 {-# OPTIONS_GHC -fno-ignore-interface-pragmas #-}
 -- | A guessing game
-module PlutusTx.Coordination.Contracts.Game
+module Plutus.Contracts.Game
     ( lock
     , guess
     , game

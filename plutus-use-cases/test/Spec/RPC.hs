@@ -3,13 +3,13 @@
 {-# LANGUAGE TypeApplications #-}
 module Spec.RPC(tests) where
 
-import           Control.Monad                       (void)
-import           Data.Either                         (isRight)
+import           Control.Monad         (void)
+import           Data.Either           (isRight)
 import           Plutus.Contract
 import           Plutus.Contract.Test
-import qualified Plutus.Trace.Emulator               as Trace
+import qualified Plutus.Trace.Emulator as Trace
 
-import           PlutusTx.Coordination.Contracts.RPC
+import           Plutus.Contracts.RPC
 
 import           Test.Tasty
 

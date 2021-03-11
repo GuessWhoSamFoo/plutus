@@ -41,6 +41,7 @@ import           Plutus.Contract.Effects.UtxoAt             (UtxoAtAddress)
 import           Plutus.Contract.Effects.WriteTx            (WriteTxResponse)
 import           Plutus.Contract.Resumable                  (Responses)
 import           Plutus.Contract.State                      (ContractRequest, State)
+import           Plutus.Contracts.Currency                  (SimpleMPS (..))
 import           Plutus.PAB.Core                            (activateContract, callContractEndpoint, installContract)
 import           Plutus.PAB.Effects.ContractTest            (TestContracts (Currency, Game))
 import           Plutus.PAB.Effects.MultiAgent              (agentAction)
@@ -57,7 +58,6 @@ import qualified Plutus.PAB.Webserver.API                   as API
 import qualified Plutus.PAB.Webserver.Handler               as Webserver
 import           Plutus.PAB.Webserver.Types                 (ChainReport, ContractReport, ContractSignatureResponse,
                                                              FullReport, StreamToClient, StreamToServer)
-import           PlutusTx.Coordination.Contracts.Currency   (SimpleMPS (..))
 import           Servant.PureScript                         (HasBridge, Settings, _generateSubscriberAPI, apiModuleName,
                                                              defaultBridge, defaultSettings, languageBridge,
                                                              writeAPIModuleWithSettings)

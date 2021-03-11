@@ -4,19 +4,19 @@
 module Spec.Auction(tests, auctionTrace1, auctionTrace2) where
 
 import           Control.Lens
-import           Control.Monad                           (void)
-import           Data.Semigroup                          (Last (..))
+import           Control.Monad                (void)
+import           Data.Semigroup               (Last (..))
 
-import           Ledger                                  (Ada, Value, pubKeyHash)
-import qualified Ledger.Ada                              as Ada
+import           Ledger                       (Ada, Value, pubKeyHash)
+import qualified Ledger.Ada                   as Ada
 import           Plutus.Contract
 import           Plutus.Contract.Test
 
-import qualified Ledger.Value                            as Value
-import qualified Plutus.Contract.StateMachine            as SM
-import qualified Plutus.Trace.Emulator                   as Trace
-import           PlutusTx.Coordination.Contracts.Auction
-import           PlutusTx.Monoid                         (inv)
+import qualified Ledger.Value                 as Value
+import qualified Plutus.Contract.StateMachine as SM
+import           Plutus.Contracts.Auction
+import qualified Plutus.Trace.Emulator        as Trace
+import           PlutusTx.Monoid              (inv)
 
 import           Test.Tasty
 

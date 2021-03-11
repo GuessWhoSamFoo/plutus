@@ -14,7 +14,7 @@
 {-# LANGUAGE UndecidableInstances #-}
 {-# OPTIONS -fplugin-opt PlutusTx.Plugin:debug-context #-}
 -- | A general-purpose escrow contract in Plutus
-module PlutusTx.Coordination.Contracts.Escrow(
+module Plutus.Contracts.Escrow(
     -- $escrow
     Escrow
     , EscrowError(..)

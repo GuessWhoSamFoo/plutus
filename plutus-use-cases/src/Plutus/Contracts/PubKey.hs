@@ -15,7 +15,7 @@
 --   contract. This is useful if you need something that behaves like
 --   a pay-to-pubkey output, but is not (easily) identified by wallets
 --   as one.
-module PlutusTx.Coordination.Contracts.PubKey(pubKeyContract, scriptInstance, PubKeyError(..), AsPubKeyError(..)) where
+module Plutus.Contracts.PubKey(pubKeyContract, scriptInstance, PubKeyError(..), AsPubKeyError(..)) where
 
 import           Control.Lens
 import           Control.Monad.Error.Lens

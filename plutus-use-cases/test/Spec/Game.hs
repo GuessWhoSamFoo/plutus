@@ -6,19 +6,19 @@ module Spec.Game
     ( tests
     ) where
 
-import           Control.Monad                        (void)
-import           Ledger.Ada                           (adaValueOf)
-import           Plutus.Contract                      (Contract, ContractError)
+import           Control.Monad         (void)
+import           Ledger.Ada            (adaValueOf)
+import           Plutus.Contract       (Contract, ContractError)
 import           Plutus.Contract.Test
-import           Plutus.Trace.Emulator                (ContractInstanceTag)
-import qualified Plutus.Trace.Emulator                as Trace
-import qualified PlutusTx                             as PlutusTx
-import           PlutusTx.Coordination.Contracts.Game
-import qualified PlutusTx.Prelude                     as PlutusTx
-import           Spec.Lib                             (timesFeeAdjust)
-import qualified Spec.Lib                             as Lib
+import           Plutus.Contracts.Game
+import           Plutus.Trace.Emulator (ContractInstanceTag)
+import qualified Plutus.Trace.Emulator as Trace
+import qualified PlutusTx              as PlutusTx
+import qualified PlutusTx.Prelude      as PlutusTx
+import           Spec.Lib              (timesFeeAdjust)
+import qualified Spec.Lib              as Lib
 import           Test.Tasty
-import qualified Test.Tasty.HUnit                     as HUnit
+import qualified Test.Tasty.HUnit      as HUnit
 
 w1, w2 :: Wallet
 w1 = Wallet 1

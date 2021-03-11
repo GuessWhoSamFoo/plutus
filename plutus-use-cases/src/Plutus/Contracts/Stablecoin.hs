@@ -55,7 +55,7 @@ We use the 'Ratio' type for all calculations in the script, using 'round' to
 obtain 'Integer' values at the very end.
 
 -}
-module PlutusTx.Coordination.Contracts.Stablecoin(
+module Plutus.Contracts.Stablecoin(
     SC(..)
     , RC(..)
     , BC(..)

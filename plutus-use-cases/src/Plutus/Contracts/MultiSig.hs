@@ -14,7 +14,7 @@
 {-# LANGUAGE TypeOperators       #-}
 {-# OPTIONS_GHC -fno-ignore-interface-pragmas #-}
 -- | Implements an n-out-of-m multisig contract.
-module PlutusTx.Coordination.Contracts.MultiSig
+module Plutus.Contracts.MultiSig
     ( MultiSig(..)
     , MultiSigSchema
     , contract

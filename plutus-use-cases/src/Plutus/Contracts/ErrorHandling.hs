@@ -8,7 +8,7 @@
 {-# LANGUAGE TemplateHaskell    #-}
 {-# LANGUAGE TypeApplications   #-}
 {-# LANGUAGE TypeOperators      #-}
-module PlutusTx.Coordination.Contracts.ErrorHandling(
+module Plutus.Contracts.ErrorHandling(
     Schema
     , MyError(..)
     , AsMyError(..)

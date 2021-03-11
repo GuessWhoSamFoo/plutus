@@ -9,7 +9,7 @@
 {-# LANGUAGE TypeFamilies       #-}
 {-# LANGUAGE TypeOperators      #-}
 -- | The credential tokens application. Runs on the user's machine.
-module PlutusTx.Coordination.Contracts.Prism.CredentialManager(
+module Plutus.Contracts.Prism.CredentialManager(
     CredentialManager
     , CredentialManagerSchema
     , CredentialManagerClientError(..)
@@ -17,18 +17,17 @@ module PlutusTx.Coordination.Contracts.Prism.CredentialManager(
     , credentialManager
     ) where
 
-import           Data.Aeson                                         (FromJSON, ToJSON)
-import           GHC.Generics                                       (Generic)
-import           Ledger.Constraints                                 (ScriptLookups, TxConstraints (..))
+import           Data.Aeson                          (FromJSON, ToJSON)
+import           GHC.Generics                        (Generic)
+import           Ledger.Constraints                  (ScriptLookups, TxConstraints (..))
 import           Plutus.Contract
 import           Plutus.Contract.Effects.RPC
-import           Plutus.Contract.StateMachine                       (InvalidTransition, SMContractError, StateMachine,
-                                                                     StateMachineTransition (..), mkStep)
-import           PlutusTx.Coordination.Contracts.Prism.StateMachine (IDAction (PresentCredential), IDState,
-                                                                     UserCredential (..))
-import qualified PlutusTx.Coordination.Contracts.Prism.StateMachine as StateMachine
+import           Plutus.Contract.StateMachine        (InvalidTransition, SMContractError, StateMachine,
+                                                      StateMachineTransition (..), mkStep)
+import           Plutus.Contracts.Prism.StateMachine (IDAction (PresentCredential), IDState, UserCredential (..))
+import qualified Plutus.Contracts.Prism.StateMachine as StateMachine
 import           PlutusTx.Prelude
-import qualified Prelude                                            as Haskell
+import qualified Prelude                             as Haskell
 
 data CredentialManager
 

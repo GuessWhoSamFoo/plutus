@@ -5,7 +5,7 @@
 {-# LANGUAGE TypeApplications   #-}
 {-# LANGUAGE TypeFamilies       #-}
 {-# LANGUAGE TypeOperators      #-}
-module PlutusTx.Coordination.Contracts.RPC where
+module Plutus.Contracts.RPC where
 
 import qualified Control.Monad               as Monad
 import           Data.Aeson                  (FromJSON, ToJSON)

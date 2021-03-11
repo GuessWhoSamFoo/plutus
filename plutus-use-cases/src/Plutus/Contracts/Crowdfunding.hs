@@ -21,7 +21,7 @@
 {-# OPTIONS_GHC -fno-ignore-interface-pragmas #-}
 {-# OPTIONS -fplugin-opt PlutusTx.Plugin:debug-context #-}
 
-module PlutusTx.Coordination.Contracts.Crowdfunding (
+module Plutus.Contracts.Crowdfunding (
     -- * Campaign parameters
       Campaign(..)
     , CrowdfundingSchema
