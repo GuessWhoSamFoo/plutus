@@ -12,9 +12,9 @@
 {-# LANGUAGE TypeFamilies         #-}
 {-# LANGUAGE TypeOperators        #-}
 {-# LANGUAGE UndecidableInstances #-}
-{-# OPTIONS -fplugin-opt Language.PlutusTx.Plugin:debug-context #-}
+{-# OPTIONS -fplugin-opt PlutusTx.Plugin:debug-context #-}
 -- | A general-purpose escrow contract in Plutus
-module Language.PlutusTx.Coordination.Contracts.Escrow(
+module PlutusTx.Coordination.Contracts.Escrow(
     -- $escrow
     Escrow
     , EscrowError(..)
@@ -62,8 +62,8 @@ import           Ledger.Value                      (Value, geq, lt)
 
 import           Language.Plutus.Contract
 import qualified Language.Plutus.Contract.Typed.Tx as Typed
-import qualified Language.PlutusTx                 as PlutusTx
-import           Language.PlutusTx.Prelude         hiding (Applicative (..), Semigroup (..), check, foldMap)
+import qualified PlutusTx                          as PlutusTx
+import           PlutusTx.Prelude                  hiding (Applicative (..), Semigroup (..), check, foldMap)
 
 import           Prelude                           (Semigroup (..), foldMap)
 import qualified Prelude                           as Haskell

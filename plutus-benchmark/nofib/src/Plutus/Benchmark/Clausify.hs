@@ -6,10 +6,10 @@
 
 module Plutus.Benchmark.Clausify where
 
-import qualified Language.PlutusTx         as Tx
-import           Language.PlutusTx.Prelude as TxPrelude hiding (replicate)
 import           PlutusCore.Builtins
 import           PlutusCore.Universe
+import qualified PlutusTx            as Tx
+import           PlutusTx.Prelude    as TxPrelude hiding (replicate)
 import           UntypedPlutusCore
 
 type Var = Integer

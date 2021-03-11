@@ -32,7 +32,6 @@ import           Language.Plutus.Contract.Effects.UtxoAt           (UtxoAtAddres
 import           Language.Plutus.Contract.Effects.WriteTx          (WriteTxResponse)
 import           Language.Plutus.Contract.Resumable                (Responses)
 import           Language.Plutus.Contract.State                    (ContractRequest, State)
-import           Language.PlutusTx.Coordination.Contracts.Currency (SimpleMPS (..))
 import           Language.PureScript.Bridge                        (BridgePart, Language (Haskell), SumType,
                                                                     TypeInfo (TypeInfo), buildBridge, equal,
                                                                     genericShow, haskType, mkSumType, order, typeModule,
@@ -60,6 +59,7 @@ import qualified Plutus.PAB.Webserver.Handler                      as Webserver
 import           Plutus.PAB.Webserver.Types                        (ChainReport, ContractReport,
                                                                     ContractSignatureResponse, FullReport,
                                                                     StreamToClient, StreamToServer)
+import           PlutusTx.Coordination.Contracts.Currency          (SimpleMPS (..))
 import           Servant.PureScript                                (HasBridge, Settings, _generateSubscriberAPI,
                                                                     apiModuleName, defaultBridge, defaultSettings,
                                                                     languageBridge, writeAPIModuleWithSettings)

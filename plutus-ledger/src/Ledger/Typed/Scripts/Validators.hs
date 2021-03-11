@@ -14,9 +14,9 @@ module Ledger.Typed.Scripts.Validators where
 import           Data.Kind
 import           Data.Void
 
-import           Language.PlutusTx
-import qualified Language.PlutusTx         as PlutusTx
-import           Language.PlutusTx.Prelude
+import           PlutusTx
+import qualified PlutusTx                  as PlutusTx
+import           PlutusTx.Prelude
 
 import           Plutus.V1.Ledger.Contexts (PolicyCtx (..), TxInfo (..))
 import qualified Plutus.V1.Ledger.Contexts as Validation

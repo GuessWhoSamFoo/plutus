@@ -1,4 +1,4 @@
-module Language.PlutusTx.Coordination.Contracts() where
+module PlutusTx.Coordination.Contracts() where
 
 {- Note [Contracts and Validator Scripts]
 

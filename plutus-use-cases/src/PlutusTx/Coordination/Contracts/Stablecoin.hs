@@ -55,7 +55,7 @@ We use the 'Ratio' type for all calculations in the script, using 'round' to
 obtain 'Integer' values at the very end.
 
 -}
-module Language.PlutusTx.Coordination.Contracts.Stablecoin(
+module PlutusTx.Coordination.Contracts.Stablecoin(
     SC(..)
     , RC(..)
     , BC(..)
@@ -87,9 +87,6 @@ import           Language.Plutus.Contract
 import           Language.Plutus.Contract.StateMachine (SMContractError, State (..), StateMachine,
                                                         StateMachineClient (..), StateMachineInstance (..), Void)
 import qualified Language.Plutus.Contract.StateMachine as StateMachine
-import qualified Language.PlutusTx                     as PlutusTx
-import           Language.PlutusTx.Prelude
-import           Language.PlutusTx.Ratio               as R
 import           Ledger.Constraints                    (TxConstraints)
 import qualified Ledger.Constraints                    as Constraints
 import           Ledger.Crypto                         (PubKey)
@@ -102,6 +99,9 @@ import           Ledger.Typed.Scripts.Validators       (forwardingMPS)
 import           Ledger.Typed.Tx                       (TypedScriptTxOut (..))
 import           Ledger.Value                          (CurrencySymbol, TokenName, Value)
 import qualified Ledger.Value                          as Value
+import qualified PlutusTx                              as PlutusTx
+import           PlutusTx.Prelude
+import           PlutusTx.Ratio                        as R
 import qualified Prelude                               as Haskell
 
 -- | Conversion rate from peg currency (eg. USD) to base currency (eg. Ada)

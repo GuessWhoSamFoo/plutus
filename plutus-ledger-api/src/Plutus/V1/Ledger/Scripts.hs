@@ -70,14 +70,14 @@ import           Data.Text.Prettyprint.Doc
 import           Data.Text.Prettyprint.Doc.Extras
 import           Flat                             (Flat, flat, unflat)
 import           GHC.Generics                     (Generic)
-import           Language.PlutusTx                (CompiledCode, IsData (..), getPlc, makeLift)
-import           Language.PlutusTx.Builtins       as Builtins
-import           Language.PlutusTx.Evaluation     (ErrorWithCause (..), EvaluationError (..), evaluateCekTrace)
-import           Language.PlutusTx.Lift           (liftCode)
-import           Language.PlutusTx.Prelude
 import           Plutus.V1.Ledger.Bytes           (LedgerBytes (..))
 import           Plutus.V1.Ledger.Orphans         ()
 import qualified PlutusCore                       as PLC
+import           PlutusTx                         (CompiledCode, IsData (..), getPlc, makeLift)
+import           PlutusTx.Builtins                as Builtins
+import           PlutusTx.Evaluation              (ErrorWithCause (..), EvaluationError (..), evaluateCekTrace)
+import           PlutusTx.Lift                    (liftCode)
+import           PlutusTx.Prelude
 import qualified UntypedPlutusCore                as UPLC
 
 -- | A script on the chain. This is an opaque type as far as the chain is concerned.

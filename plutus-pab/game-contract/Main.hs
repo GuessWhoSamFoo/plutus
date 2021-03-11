@@ -2,8 +2,8 @@ module Main
     ( main
     ) where
 
-import           Language.PlutusTx.Coordination.Contracts.Game (game)
-import           Plutus.PAB.ContractCLI                        (commandLineApp)
+import           Plutus.PAB.ContractCLI               (commandLineApp)
+import           PlutusTx.Coordination.Contracts.Game (game)
 
 main :: IO ()
 main = commandLineApp game

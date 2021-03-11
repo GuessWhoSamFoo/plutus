@@ -4,24 +4,24 @@
 {-# LANGUAGE NoImplicitPrelude   #-}
 {-# LANGUAGE ScopedTypeVariables #-}
 {-# LANGUAGE TemplateHaskell     #-}
-module PlutusTx where
+module BasicPlutusTx where
 
-import qualified PlutusCore.Builtins        as PLC
-import qualified PlutusCore.Universe        as PLC
+import qualified PlutusCore.Builtins as PLC
+import qualified PlutusCore.Universe as PLC
 -- Main Plutus Tx module.
-import           Language.PlutusTx
+import           PlutusTx
 -- Additional support for lifting.
-import           Language.PlutusTx.Lift
+import           PlutusTx.Lift
 -- Builtin functions.
-import           Language.PlutusTx.Builtins
+import           PlutusTx.Builtins
 -- The Plutus Tx Prelude, discussed further below.
-import           Language.PlutusTx.Prelude
+import           PlutusTx.Prelude
 
 -- Setup for doctest examples.
 
 -- $setup
 -- >>> import Tutorial.PlutusTx
--- >>> import Language.PlutusTx
+-- >>> import PlutusTx
 -- >>> import PlutusCore
 -- >>> import PlutusCore.Evaluation.Machine.Ck
 -- >>> import Data.Text.Prettyprint.Doc
@@ -62,7 +62,7 @@ integerIdentity = $$(compile [|| \(x:: Integer) -> x ||])
   always include it. -}
 {-# INLINABLE plusOne #-}
 plusOne :: Integer -> Integer
-{- 'addInteger' comes from 'Language.PlutusTx.Builtins', and is
+{- 'addInteger' comes from 'PlutusTx.Builtins', and is
   mapped to the builtin integer addition function in Plutus Core. -}
 plusOne x = x `addInteger` 1
 

@@ -328,7 +328,7 @@ knownCurrencyTest =
             , "import Ledger.Value (TokenName(TokenName))"
             , "import Ledger.Scripts (ValidatorHash (..))"
             , "import Playground.Types (KnownCurrency (..))"
-            , "import Language.PlutusTx.Prelude"
+            , "import PlutusTx.Prelude"
             , ""
             , "myCurrency :: KnownCurrency"
             , "myCurrency = KnownCurrency (ValidatorHash \"\") \"MyCurrency\" (TokenName \"MyToken\" :| [])"

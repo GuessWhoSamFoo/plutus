@@ -2,27 +2,27 @@
 {-# LANGUAGE FlexibleContexts #-}
 
 -- | Functions for compiling GHC names into Plutus Core names.
-module Language.PlutusTx.Compiler.Names where
+module PlutusTx.Compiler.Names where
 
 
-import                          Language.PlutusTx.Compiler.Kind
-import {-# SOURCE #-}           Language.PlutusTx.Compiler.Type
-import                          Language.PlutusTx.Compiler.Types
-import                          Language.PlutusTx.PLCTypes
+import                          PlutusTx.Compiler.Kind
+import {-# SOURCE #-}           PlutusTx.Compiler.Type
+import                          PlutusTx.Compiler.Types
+import                          PlutusTx.PLCTypes
 
-import                qualified GhcPlugins                       as GHC
+import                qualified GhcPlugins              as GHC
 
-import                qualified PlutusCore                       as PLC
-import                qualified PlutusCore.MkPlc                 as PLC
+import                qualified PlutusCore              as PLC
+import                qualified PlutusCore.MkPlc        as PLC
 import                          PlutusCore.Quote
 
 import                          PlutusIR.Compiler.Names
 
 import                          Data.Char
 import                          Data.List
-import                qualified Data.List.NonEmpty               as NE
-import                qualified Data.Map                         as Map
-import                qualified Data.Text                        as T
+import                qualified Data.List.NonEmpty      as NE
+import                qualified Data.Map                as Map
+import                qualified Data.Text               as T
 
 lookupName :: Scope uni fun -> GHC.Name -> Maybe (PLCVar uni fun)
 lookupName (Scope ns _) n = Map.lookup n ns

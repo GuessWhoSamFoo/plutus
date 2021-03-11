@@ -72,8 +72,6 @@ import qualified Data.Text                                 as Text
 import           Data.Text.Prettyprint.Doc
 import           Data.Tuple
 import qualified Flat
-import           Language.PlutusTx                         (Data (..), IsData (..))
-import qualified Language.PlutusTx.Lift                    as PlutusTx
 import           Plutus.V1.Ledger.Address
 import           Plutus.V1.Ledger.Bytes
 import           Plutus.V1.Ledger.Contexts
@@ -90,6 +88,8 @@ import qualified PlutusCore.Evaluation.Machine.ExBudgeting as PLC
 import           PlutusCore.Evaluation.Machine.ExMemory    (ExCPU (..), ExMemory (..))
 import qualified PlutusCore.MkPlc                          as PLC
 import           PlutusCore.Pretty
+import           PlutusTx                                  (Data (..), IsData (..))
+import qualified PlutusTx.Lift                             as PlutusTx
 import qualified UntypedPlutusCore                         as UPLC
 import qualified UntypedPlutusCore.Evaluation.Machine.Cek  as UPLC
 

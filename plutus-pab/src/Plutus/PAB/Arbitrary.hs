@@ -15,8 +15,6 @@ import           Language.Plutus.Contract.Effects.AwaitTxConfirmed (TxConfirmed 
 import           Language.Plutus.Contract.Effects.ExposeEndpoint   (ActiveEndpoint (..), EndpointDescription (..),
                                                                     EndpointValue (..))
 import           Language.Plutus.Contract.Effects.OwnPubKey        (OwnPubKeyRequest (..))
-import qualified Language.PlutusTx                                 as PlutusTx
-import qualified Language.PlutusTx.AssocMap                        as AssocMap
 import           Ledger                                            (ValidatorHash (ValidatorHash))
 import qualified Ledger
 import           Ledger.Address                                    (Address (..))
@@ -28,6 +26,8 @@ import           Ledger.Slot                                       (Slot)
 import           Ledger.Tx                                         (TxIn, TxInType, TxOutRef, TxOutType)
 import           Ledger.TxId                                       (TxId)
 import           Plutus.PAB.Events.Contract
+import qualified PlutusTx                                          as PlutusTx
+import qualified PlutusTx.AssocMap                                 as AssocMap
 import           Test.QuickCheck                                   (Gen, oneof)
 import           Test.QuickCheck.Arbitrary.Generic                 (Arbitrary, arbitrary, genericArbitrary,
                                                                     genericShrink, shrink)

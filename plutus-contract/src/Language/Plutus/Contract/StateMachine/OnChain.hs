@@ -28,10 +28,10 @@ import           Data.Aeson                       (FromJSON, ToJSON)
 import           Data.Void                        (Void)
 import           GHC.Generics                     (Generic)
 
-import qualified Language.PlutusTx                as PlutusTx
-import           Language.PlutusTx.Prelude        hiding (check)
 import           Ledger.Constraints
 import           Ledger.Constraints.TxConstraints (OutputConstraint (..))
+import qualified PlutusTx                         as PlutusTx
+import           PlutusTx.Prelude                 hiding (check)
 
 import           Ledger                           (Address, Value)
 import           Ledger.Contexts                  (TxInInfo (..), ValidatorCtx (..), findOwnInput)

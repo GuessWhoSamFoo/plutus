@@ -25,8 +25,6 @@ import           Language.Plutus.Contract                        as Con
 import           Language.Plutus.Contract.Test
 import           Language.Plutus.Contract.Types                  (ResumableResult (..))
 import           Language.Plutus.Contract.Util                   (loopM)
-import qualified Language.PlutusTx                               as PlutusTx
-import           Language.PlutusTx.Lattice
 import           Ledger                                          (Address, PubKey, Slot)
 import qualified Ledger                                          as Ledger
 import qualified Ledger.Ada                                      as Ada
@@ -37,6 +35,8 @@ import           Plutus.Trace.Emulator                           (ContractInstan
                                                                   activateContract, activeEndpoints, callEndpoint)
 import           Plutus.Trace.Emulator.Types                     (ContractInstanceLog (..), ContractInstanceMsg (..),
                                                                   ContractInstanceState (..), UserThreadMsg (..))
+import qualified PlutusTx                                        as PlutusTx
+import           PlutusTx.Lattice
 import           Prelude                                         hiding (not)
 import qualified Prelude                                         as P
 import qualified Wallet.Emulator                                 as EM

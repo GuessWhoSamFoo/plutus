@@ -14,7 +14,7 @@
 {-# LANGUAGE TypeOperators      #-}
 {-# OPTIONS_GHC -fno-ignore-interface-pragmas #-}
 {-# OPTIONS_GHC -fno-specialise #-}
-module Language.PlutusTx.Coordination.Contracts.Vesting (
+module PlutusTx.Coordination.Contracts.Vesting (
     -- $vesting
     VestingParams(..),
     VestingSchema,
@@ -36,8 +36,6 @@ import           Prelude                           (Semigroup (..))
 import           GHC.Generics                      (Generic)
 import           Language.Plutus.Contract          hiding (when)
 import qualified Language.Plutus.Contract.Typed.Tx as Typed
-import qualified Language.PlutusTx                 as PlutusTx
-import           Language.PlutusTx.Prelude         hiding (Semigroup (..), fold)
 import           Ledger                            (Address, PubKeyHash (..), Slot (..), Validator)
 import           Ledger.Constraints                (TxConstraints, mustBeSignedBy, mustPayToTheScript, mustValidateIn)
 import           Ledger.Contexts                   (TxInfo (..), ValidatorCtx (..))
@@ -49,6 +47,8 @@ import           Ledger.Typed.Scripts              (ScriptType (..))
 import qualified Ledger.Typed.Scripts              as Scripts
 import           Ledger.Value                      (Value)
 import qualified Ledger.Value                      as Value
+import qualified PlutusTx                          as PlutusTx
+import           PlutusTx.Prelude                  hiding (Semigroup (..), fold)
 import qualified Prelude                           as Haskell
 
 {- |

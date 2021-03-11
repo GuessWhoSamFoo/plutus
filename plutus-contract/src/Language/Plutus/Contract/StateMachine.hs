@@ -60,7 +60,6 @@ import           Language.Plutus.Contract
 import           Language.Plutus.Contract.StateMachine.OnChain (State (..), StateMachine (..),
                                                                 StateMachineInstance (..))
 import qualified Language.Plutus.Contract.StateMachine.OnChain as SM
-import qualified Language.PlutusTx                             as PlutusTx
 import           Ledger                                        (Slot, Value)
 import qualified Ledger
 import           Ledger.AddressMap                             (UtxoMap)
@@ -73,6 +72,7 @@ import           Ledger.Tx                                     as Tx
 import qualified Ledger.Typed.Scripts                          as Scripts
 import           Ledger.Typed.Tx                               (TypedScriptTxOut (..))
 import qualified Ledger.Typed.Tx                               as Typed
+import qualified PlutusTx                                      as PlutusTx
 
 -- $statemachine
 -- To write your contract as a state machine you need

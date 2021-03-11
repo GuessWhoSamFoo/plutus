@@ -14,14 +14,14 @@
 {-# LANGUAGE ViewPatterns          #-}
 {-# OPTIONS_GHC -fno-strictness #-}
 {-# OPTIONS_GHC -fno-ignore-interface-pragmas #-}
-{-# OPTIONS -fplugin-opt Language.PlutusTx.Plugin:debug-context #-}
+{-# OPTIONS -fplugin-opt PlutusTx.Plugin:debug-context #-}
 -- | A guessing game that
 --
 --   * Uses a state machine to keep track of the current secret word
 --   * Uses a token to keep track of who is allowed to make a guess
 --
 
-module Language.PlutusTx.Coordination.Contracts.GameStateMachine(
+module PlutusTx.Coordination.Contracts.GameStateMachine(
     contract
     , scriptInstance
     , GameToken
@@ -36,13 +36,13 @@ module Language.PlutusTx.Coordination.Contracts.GameStateMachine(
 import           Control.Monad                         (void)
 import           Data.Aeson                            (FromJSON, ToJSON)
 import           GHC.Generics                          (Generic)
-import qualified Language.PlutusTx                     as PlutusTx
-import           Language.PlutusTx.Prelude             hiding (Applicative (..), check)
 import           Ledger                                hiding (to)
 import           Ledger.Constraints                    (TxConstraints)
 import qualified Ledger.Constraints                    as Constraints
 import qualified Ledger.Typed.Scripts                  as Scripts
 import qualified Ledger.Value                          as V
+import qualified PlutusTx                              as PlutusTx
+import           PlutusTx.Prelude                      hiding (Applicative (..), check)
 
 import qualified Data.ByteString.Char8                 as C
 
@@ -185,7 +185,7 @@ monetaryPolicy :: Scripts.MonetaryPolicy
 monetaryPolicy = Scripts.monetaryPolicy scriptInstance
 
 -- | The 'SM.StateMachineInstance' of the game state machine contract. It uses
---   the functions in 'Language.PlutusTx.StateMachine' to generate a validator
+--   the functions in 'PlutusTx.StateMachine' to generate a validator
 --   script based on the functions 'step' and 'check' we defined above.
 machineInstance :: SM.StateMachineInstance GameState GameInput
 machineInstance = SM.StateMachineInstance machine scriptInstance

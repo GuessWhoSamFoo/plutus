@@ -1,9 +1,9 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 {-# OPTIONS_GHC -fno-omit-interface-pragmas #-}
-module Language.PlutusTx.Applicative where
+module PlutusTx.Applicative where
 
-import           Language.PlutusTx.Functor
-import           Prelude                   (Bool, Either (..), Maybe (..))
+import           PlutusTx.Functor
+import           Prelude          (Bool, Either (..), Maybe (..))
 
 {-# ANN module "HLint: ignore" #-}
 

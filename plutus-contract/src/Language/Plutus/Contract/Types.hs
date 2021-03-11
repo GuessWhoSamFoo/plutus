@@ -84,8 +84,8 @@ import           Language.Plutus.Contract.Checkpoint (AsCheckpointError (..), Ch
 import           Language.Plutus.Contract.Resumable  hiding (responses, select)
 import qualified Language.Plutus.Contract.Resumable  as Resumable
 
-import qualified Language.PlutusTx.Applicative       as PlutusTx
-import qualified Language.PlutusTx.Functor           as PlutusTx
+import qualified PlutusTx.Applicative                as PlutusTx
+import qualified PlutusTx.Functor                    as PlutusTx
 import           Prelude                             as Haskell
 import           Wallet.Types                        (AsContractError (..), ContractError (..), MatchingError (..))
 

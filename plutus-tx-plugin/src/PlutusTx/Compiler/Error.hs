@@ -7,7 +7,7 @@
 {-# LANGUAGE TypeFamilies           #-}
 {-# LANGUAGE TypeOperators          #-}
 {-# LANGUAGE UndecidableInstances   #-}
-module Language.PlutusTx.Compiler.Error (
+module PlutusTx.Compiler.Error (
     CompileError
     , Error (..)
     , WithContext (..)

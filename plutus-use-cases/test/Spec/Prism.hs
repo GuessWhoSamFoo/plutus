@@ -4,19 +4,19 @@
 {-# LANGUAGE TypeApplications  #-}
 module Spec.Prism(tests, prismTrace) where
 
-import           Control.Monad                                             (void)
+import           Control.Monad                                    (void)
 import           Language.Plutus.Contract.Test
-import qualified Ledger.Ada                                                as Ada
-import           Ledger.Crypto                                             (pubKeyHash)
-import           Ledger.Value                                              (TokenName)
+import qualified Ledger.Ada                                       as Ada
+import           Ledger.Crypto                                    (pubKeyHash)
+import           Ledger.Value                                     (TokenName)
 
 import           Test.Tasty
 
-import           Language.PlutusTx.Coordination.Contracts.Prism            hiding (credentialManager, mirror)
-import qualified Language.PlutusTx.Coordination.Contracts.Prism.Credential as Credential
-import           Language.PlutusTx.Coordination.Contracts.Prism.STO        (STOData (..))
-import qualified Language.PlutusTx.Coordination.Contracts.Prism.STO        as STO
-import qualified Plutus.Trace.Emulator                                     as Trace
+import qualified Plutus.Trace.Emulator                            as Trace
+import           PlutusTx.Coordination.Contracts.Prism            hiding (credentialManager, mirror)
+import qualified PlutusTx.Coordination.Contracts.Prism.Credential as Credential
+import           PlutusTx.Coordination.Contracts.Prism.STO        (STOData (..))
+import qualified PlutusTx.Coordination.Contracts.Prism.STO        as STO
 
 user, credentialManager, mirror, issuer :: Wallet
 user = Wallet 1

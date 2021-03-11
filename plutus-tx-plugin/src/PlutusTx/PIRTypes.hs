@@ -1,4 +1,4 @@
-module Language.PlutusTx.PIRTypes where
+module PlutusTx.PIRTypes where
 
 import qualified PlutusIR as PIR
 

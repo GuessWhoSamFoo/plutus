@@ -25,7 +25,7 @@ import           Language.Plutus.Contract.Schema                   (Event (..), 
 import           Language.Plutus.Contract.Types                    (AsContractError, Contract,
                                                                     _ConstraintResolutionError, _WalletError,
                                                                     throwError)
-import qualified Language.PlutusTx                                 as PlutusTx
+import qualified PlutusTx                                          as PlutusTx
 
 import           Ledger.AddressMap                                 (UtxoMap)
 import           Ledger.Constraints                                (TxConstraints)

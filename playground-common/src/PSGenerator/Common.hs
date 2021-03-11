@@ -156,19 +156,19 @@ psBigInteger = TypeInfo "purescript-foreign-generic" "Data.BigInteger" "BigInteg
 
 psAssocMap :: MonadReader BridgeData m => m PSType
 psAssocMap =
-    TypeInfo "plutus-playground-client" "Language.PlutusTx.AssocMap" "Map" <$>
+    TypeInfo "plutus-playground-client" "PlutusTx.AssocMap" "Map" <$>
     psTypeParameters
 
 dataBridge :: BridgePart
 dataBridge = do
     typeName ^== "Data"
-    typeModule ^== "Language.PlutusTx.Data"
+    typeModule ^== "PlutusTx.Data"
     pure psString
 
 assocMapBridge :: BridgePart
 assocMapBridge = do
     typeName ^== "Map"
-    typeModule ^== "Language.PlutusTx.AssocMap"
+    typeModule ^== "PlutusTx.AssocMap"
     psAssocMap
 
 languageBridge :: BridgePart

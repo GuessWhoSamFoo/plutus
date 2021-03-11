@@ -3,7 +3,7 @@
 {-# LANGUAGE TypeFamilies     #-}
 {-# LANGUAGE TypeOperators    #-}
 
-module Language.PlutusTx.Evaluation
+module PlutusTx.Evaluation
     ( evaluateCek
     , unsafeEvaluateCek
     , evaluateCekTrace

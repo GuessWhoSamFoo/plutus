@@ -3,7 +3,7 @@
 {-# OPTIONS_GHC -fno-omit-interface-pragmas #-}
 {-# OPTIONS_GHC -fmax-simplifier-iterations=0 #-}
 
-module Language.PlutusTx.Prelude (
+module PlutusTx.Prelude (
     -- $prelude
     -- * Classes
     module Eq,
@@ -63,31 +63,30 @@ module Language.PlutusTx.Prelude (
     module Prelude
     ) where
 
-import           Data.String                   (IsString (..))
-import           Language.PlutusTx.Applicative as Applicative
-import           Language.PlutusTx.Bool        as Bool
-import           Language.PlutusTx.Builtins    (ByteString, concatenate, dropByteString, emptyByteString,
-                                                equalsByteString, greaterThanByteString, lessThanByteString, sha2_256,
-                                                sha3_256, takeByteString, verifySignature)
-import qualified Language.PlutusTx.Builtins    as Builtins
-import           Language.PlutusTx.Either      as Either
-import           Language.PlutusTx.Eq          as Eq
-import           Language.PlutusTx.Functor     as Functor
-import           Language.PlutusTx.Lattice     as Lattice
-import           Language.PlutusTx.List        as List
-import           Language.PlutusTx.Maybe       as Maybe
-import           Language.PlutusTx.Monoid      as Monoid
-import           Language.PlutusTx.Numeric     as Numeric
-import           Language.PlutusTx.Ord         as Ord
-import           Language.PlutusTx.Ratio       as Ratio
-import           Language.PlutusTx.Semigroup   as Semigroup
-import           Language.PlutusTx.String      as String
-import           Prelude                       as Prelude hiding (Applicative (..), Eq (..), Functor (..), Monoid (..),
-                                                           Num (..), Ord (..), Rational, Semigroup (..), all, any,
-                                                           const, divMod, either, elem, error, filter, foldMap, foldl,
-                                                           foldr, fst, id, length, map, max, maybe, min, not, null,
-                                                           quotRem, reverse, round, sequence, snd, traverse, zip, (!!),
-                                                           ($), (&&), (++), (<$>), (||))
+import           Data.String          (IsString (..))
+import           PlutusTx.Applicative as Applicative
+import           PlutusTx.Bool        as Bool
+import           PlutusTx.Builtins    (ByteString, concatenate, dropByteString, emptyByteString, equalsByteString,
+                                       greaterThanByteString, lessThanByteString, sha2_256, sha3_256, takeByteString,
+                                       verifySignature)
+import qualified PlutusTx.Builtins    as Builtins
+import           PlutusTx.Either      as Either
+import           PlutusTx.Eq          as Eq
+import           PlutusTx.Functor     as Functor
+import           PlutusTx.Lattice     as Lattice
+import           PlutusTx.List        as List
+import           PlutusTx.Maybe       as Maybe
+import           PlutusTx.Monoid      as Monoid
+import           PlutusTx.Numeric     as Numeric
+import           PlutusTx.Ord         as Ord
+import           PlutusTx.Ratio       as Ratio
+import           PlutusTx.Semigroup   as Semigroup
+import           PlutusTx.String      as String
+import           Prelude              as Prelude hiding (Applicative (..), Eq (..), Functor (..), Monoid (..), Num (..),
+                                                  Ord (..), Rational, Semigroup (..), all, any, const, divMod, either,
+                                                  elem, error, filter, foldMap, foldl, foldr, fst, id, length, map, max,
+                                                  maybe, min, not, null, quotRem, reverse, round, sequence, snd,
+                                                  traverse, zip, (!!), ($), (&&), (++), (<$>), (||))
 
 -- this module does lots of weird stuff deliberately
 {-# ANN module ("HLint: ignore"::String) #-}
@@ -98,12 +97,12 @@ import           Prelude                       as Prelude hiding (Applicative (.
 -- will be compiled with the Plutus Tx compiler.
 -- @
 --     {-# LANGUAGE NoImplicitPrelude #-}
---     import Language.PlutusTx.Prelude
+--     import PlutusTx.Prelude
 -- @
 
 -- $setup
 -- >>> :set -XNoImplicitPrelude
--- >>> import Language.PlutusTx.Prelude
+-- >>> import PlutusTx.Prelude
 
 {-# INLINABLE error #-}
 -- | Terminate the evaluation of the script with an error message.

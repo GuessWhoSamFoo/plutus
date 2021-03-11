@@ -53,9 +53,9 @@ import qualified Data.Set                         as Set
 import           Data.Text.Prettyprint.Doc
 import           GHC.Generics                     (Generic)
 
-import           Language.PlutusTx                (IsData (..))
-import           Language.PlutusTx.Lattice
-import qualified Language.PlutusTx.Numeric        as N
+import           PlutusTx                         (IsData (..))
+import           PlutusTx.Lattice
+import qualified PlutusTx.Numeric                 as N
 
 import           Ledger.Constraints.TxConstraints hiding (requiredSignatories)
 import           Ledger.Orphans                   ()

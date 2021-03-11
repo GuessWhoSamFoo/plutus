@@ -1,4 +1,4 @@
-module Language.PlutusTx.PLCTypes where
+module PlutusTx.PLCTypes where
 
 import qualified PlutusCore        as PLC
 import qualified PlutusCore.MkPlc  as PLC

@@ -95,9 +95,9 @@ import           Language.Plutus.Contract.Effects.WriteTx        (HasWriteTx)
 import           Language.Plutus.Contract.Resumable              (Request (..), Response (..))
 import qualified Language.Plutus.Contract.Resumable              as State
 import           Language.Plutus.Contract.Types                  (Contract (..))
-import qualified Language.PlutusTx.Prelude                       as P
 import           Ledger.Constraints.OffChain                     (UnbalancedTx)
 import           Ledger.Tx                                       (Tx)
+import qualified PlutusTx.Prelude                                as P
 
 import           Ledger.Address                                  (Address)
 import           Ledger.Generators                               (GeneratorModel, Mockchain (..))

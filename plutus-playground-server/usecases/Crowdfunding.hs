@@ -27,8 +27,6 @@ import           Control.Monad                        (void)
 import           Language.Plutus.Contract
 import qualified Language.Plutus.Contract.Constraints as Constraints
 import qualified Language.Plutus.Contract.Typed.Tx    as Typed
-import qualified Language.PlutusTx                    as PlutusTx
-import           Language.PlutusTx.Prelude            hiding (Applicative (..), Semigroup (..))
 import           Ledger                               (PubKeyHash, TxInfo (..), Validator, ValidatorCtx (..),
                                                        pubKeyHash, txId, valueSpent)
 import qualified Ledger                               as Ledger
@@ -41,6 +39,8 @@ import qualified Ledger.Typed.Scripts                 as Scripts
 import           Ledger.Value                         (Value)
 import qualified Ledger.Value                         as Value
 import           Playground.Contract
+import qualified PlutusTx                             as PlutusTx
+import           PlutusTx.Prelude                     hiding (Applicative (..), Semigroup (..))
 import           Prelude                              (Semigroup (..))
 import qualified Prelude                              as Haskell
 import qualified Wallet.Emulator                      as Emulator

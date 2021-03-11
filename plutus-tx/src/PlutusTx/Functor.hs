@@ -1,5 +1,5 @@
 {-# OPTIONS_GHC -fno-omit-interface-pragmas #-}
-module Language.PlutusTx.Functor (Functor(..), (<$>), (<$), const, id) where
+module PlutusTx.Functor (Functor(..), (<$>), (<$), const, id) where
 
 import           Data.Functor.Identity (Identity (..))
 import           Prelude               hiding (Functor (..), const, id, (<$), (<$>))

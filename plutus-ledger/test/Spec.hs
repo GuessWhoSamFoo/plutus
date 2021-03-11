@@ -24,12 +24,6 @@ import           Hedgehog                    (Property, forAll, property)
 import qualified Hedgehog
 import qualified Hedgehog.Gen                as Gen
 import qualified Hedgehog.Range              as Range
-import           Language.PlutusTx           (CompiledCode, applyCode, liftCode)
-import qualified Language.PlutusTx           as PlutusTx
-import qualified Language.PlutusTx.AssocMap  as AMap
-import qualified Language.PlutusTx.AssocMap  as AssocMap
-import qualified Language.PlutusTx.Builtins  as Builtins
-import qualified Language.PlutusTx.Prelude   as PlutusTx
 import           Ledger
 import qualified Ledger.Ada                  as Ada
 import           Ledger.Bytes                as Bytes
@@ -44,6 +38,12 @@ import           Ledger.Value                (CurrencySymbol, Value (Value))
 import qualified Ledger.Value                as Value
 import qualified PlutusCore.Builtins         as PLC
 import qualified PlutusCore.Universe         as PLC
+import           PlutusTx                    (CompiledCode, applyCode, liftCode)
+import qualified PlutusTx                    as PlutusTx
+import qualified PlutusTx.AssocMap           as AMap
+import qualified PlutusTx.AssocMap           as AssocMap
+import qualified PlutusTx.Builtins           as Builtins
+import qualified PlutusTx.Prelude            as PlutusTx
 import           Test.Tasty
 import           Test.Tasty.HUnit            (testCase)
 import qualified Test.Tasty.HUnit            as HUnit

@@ -1,6 +1,6 @@
 {-# LANGUAGE LambdaCase      #-}
 {-# LANGUAGE TemplateHaskell #-}
-module Language.PlutusTx.Lift.THUtils where
+module PlutusTx.Lift.THUtils where
 
 import           PlutusIR
 import           PlutusIR.Compiler.Names

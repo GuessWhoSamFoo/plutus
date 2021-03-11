@@ -13,7 +13,7 @@
 --   * 'subscribeSTO' uses the credential to participate in an STO
 --   * 'unlockExchange' uses the credential to take ownership of funds that
 --     were locked by an exchange.
-module Language.PlutusTx.Coordination.Contracts.Prism.Unlock(
+module PlutusTx.Coordination.Contracts.Prism.Unlock(
     -- * STO
     STOSubscriber(..)
     , STOSubscriberSchema
@@ -25,29 +25,28 @@ module Language.PlutusTx.Coordination.Contracts.Prism.Unlock(
     , UnlockError(..)
     ) where
 
-import           Data.Aeson                                                       (FromJSON, ToJSON)
-import           GHC.Generics                                                     (Generic)
+import           Data.Aeson                                              (FromJSON, ToJSON)
+import           GHC.Generics                                            (Generic)
 import           Language.Plutus.Contract
-import           Language.Plutus.Contract.Effects.RPC                             (HasRPCClient, RPCCallError,
-                                                                                   RPCClient, RPCResponse, Retries (..),
-                                                                                   callRPC)
-import           Language.PlutusTx.Coordination.Contracts.Prism.Credential        (Credential)
-import qualified Language.PlutusTx.Coordination.Contracts.Prism.Credential        as Credential
-import           Language.PlutusTx.Coordination.Contracts.Prism.CredentialManager (CredentialManager,
-                                                                                   CredentialManagerClientError)
-import           Language.PlutusTx.Coordination.Contracts.Prism.STO               (STOData (..))
-import qualified Language.PlutusTx.Coordination.Contracts.Prism.STO               as STO
-import           Language.PlutusTx.Coordination.Contracts.Prism.StateMachine      (UserCredential (..))
-import           Language.PlutusTx.Coordination.Contracts.TokenAccount            (TokenAccountError)
-import qualified Language.PlutusTx.Coordination.Contracts.TokenAccount            as TokenAccount
-import           Ledger                                                           (pubKeyHash, txId)
-import qualified Ledger.Ada                                                       as Ada
-import           Ledger.Constraints                                               (SomeLookupsAndConstraints (..))
-import qualified Ledger.Constraints                                               as Constraints
-import           Ledger.Crypto                                                    (PubKeyHash)
-import           Ledger.Value                                                     (TokenName)
-import           Prelude                                                          as Haskell
-import           Schema                                                           (ToSchema)
+import           Language.Plutus.Contract.Effects.RPC                    (HasRPCClient, RPCCallError, RPCClient,
+                                                                          RPCResponse, Retries (..), callRPC)
+import           Ledger                                                  (pubKeyHash, txId)
+import qualified Ledger.Ada                                              as Ada
+import           Ledger.Constraints                                      (SomeLookupsAndConstraints (..))
+import qualified Ledger.Constraints                                      as Constraints
+import           Ledger.Crypto                                           (PubKeyHash)
+import           Ledger.Value                                            (TokenName)
+import           PlutusTx.Coordination.Contracts.Prism.Credential        (Credential)
+import qualified PlutusTx.Coordination.Contracts.Prism.Credential        as Credential
+import           PlutusTx.Coordination.Contracts.Prism.CredentialManager (CredentialManager,
+                                                                          CredentialManagerClientError)
+import           PlutusTx.Coordination.Contracts.Prism.STO               (STOData (..))
+import qualified PlutusTx.Coordination.Contracts.Prism.STO               as STO
+import           PlutusTx.Coordination.Contracts.Prism.StateMachine      (UserCredential (..))
+import           PlutusTx.Coordination.Contracts.TokenAccount            (TokenAccountError)
+import qualified PlutusTx.Coordination.Contracts.TokenAccount            as TokenAccount
+import           Prelude                                                 as Haskell
+import           Schema                                                  (ToSchema)
 
 data STOSubscriber =
     STOSubscriber

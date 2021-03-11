@@ -3,11 +3,11 @@
 {-# LANGUAGE TypeApplications #-}
 module Spec.ErrorHandling(tests) where
 
-import           Control.Monad                                          (void)
+import           Control.Monad                                 (void)
 import           Language.Plutus.Contract.Test
 
-import           Language.PlutusTx.Coordination.Contracts.ErrorHandling
-import qualified Plutus.Trace.Emulator                                  as Trace
+import qualified Plutus.Trace.Emulator                         as Trace
+import           PlutusTx.Coordination.Contracts.ErrorHandling
 
 import           Test.Tasty
 

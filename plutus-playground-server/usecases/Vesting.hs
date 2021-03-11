@@ -19,8 +19,6 @@ import qualified Data.Text                         as T
 
 import           Language.Plutus.Contract          hiding (when)
 import qualified Language.Plutus.Contract.Typed.Tx as Typed
-import qualified Language.PlutusTx                 as PlutusTx
-import           Language.PlutusTx.Prelude         hiding (Semigroup (..), fold)
 import           Ledger                            (Address, PubKeyHash, Slot (Slot), Validator, pubKeyHash)
 import qualified Ledger.Ada                        as Ada
 import           Ledger.Constraints                (TxConstraints, mustBeSignedBy, mustPayToTheScript, mustValidateIn)
@@ -33,6 +31,8 @@ import qualified Ledger.Typed.Scripts              as Scripts
 import           Ledger.Value                      (Value)
 import qualified Ledger.Value                      as Value
 import           Playground.Contract
+import qualified PlutusTx                          as PlutusTx
+import           PlutusTx.Prelude                  hiding (Semigroup (..), fold)
 import           Prelude                           (Semigroup (..))
 import           Wallet.Emulator.Types             (walletPubKey)
 

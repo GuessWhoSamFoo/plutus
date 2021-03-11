@@ -59,12 +59,12 @@ import           GHC.Generics                         (C1, Constructor, D1, Gene
                                                        Selector, U1, conIsRecord, conName, from, selName, (:*:) ((:*:)),
                                                        (:+:) (L1, R1))
 import           Language.Plutus.Contract.Effects.RPC (RPCParams)
-import qualified Language.PlutusTx.AssocMap
-import qualified Language.PlutusTx.Prelude            as P
 import           Ledger                               (Ada, CurrencySymbol, DatumHash, Interval, PubKey, PubKeyHash,
                                                        RedeemerHash, Signature, Slot, SlotRange, TokenName,
                                                        ValidatorHash, Value)
 import           Ledger.Bytes                         (LedgerBytes)
+import qualified PlutusTx.AssocMap
+import qualified PlutusTx.Prelude                     as P
 import           Wallet.Emulator.Wallet               (Wallet)
 import           Wallet.Types                         (ContractInstanceId)
 
@@ -353,7 +353,7 @@ instance ToSchema P.ByteString where
     toSchema = toSchema @String
 
 instance (ToSchema k, ToSchema v) =>
-         ToSchema (Language.PlutusTx.AssocMap.Map k v)
+         ToSchema (PlutusTx.AssocMap.Map k v)
 
 instance ToSchema Value where
     toSchema = FormSchemaValue

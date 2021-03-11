@@ -20,7 +20,7 @@
 {-# LANGUAGE ViewPatterns               #-}
 {-# OPTIONS_GHC -fno-ignore-interface-pragmas #-}
 -- | A guessing game
-module Language.PlutusTx.Coordination.Contracts.Game
+module PlutusTx.Coordination.Contracts.Game
     ( lock
     , guess
     , game
@@ -45,13 +45,13 @@ import           Data.Aeson                      (FromJSON, ToJSON)
 import           GHC.Generics                    (Generic)
 import           Language.Plutus.Contract
 import           Language.Plutus.Contract.Schema ()
-import qualified Language.PlutusTx               as PlutusTx
-import           Language.PlutusTx.Prelude
 import           Ledger                          (Address, Validator, ValidatorCtx, Value)
 import qualified Ledger.Constraints              as Constraints
 import qualified Ledger.Typed.Scripts            as Scripts
 import           Plutus.Trace.Emulator           (EmulatorTrace)
 import qualified Plutus.Trace.Emulator           as Trace
+import qualified PlutusTx                        as PlutusTx
+import           PlutusTx.Prelude
 import           Schema                          (ToArgument, ToSchema)
 import           Wallet.Emulator                 (Wallet (..))
 

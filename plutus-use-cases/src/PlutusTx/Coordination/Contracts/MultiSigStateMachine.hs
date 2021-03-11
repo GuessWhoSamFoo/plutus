@@ -19,7 +19,7 @@
 {-# OPTIONS_GHC -fno-specialise #-}
 -- | A multisig contract written as a state machine.
 --   $multisig
-module Language.PlutusTx.Coordination.Contracts.MultiSigStateMachine(
+module PlutusTx.Coordination.Contracts.MultiSigStateMachine(
       Params(..)
     , Payment(..)
     , State
@@ -48,8 +48,8 @@ import           Language.Plutus.Contract
 import           Language.Plutus.Contract.StateMachine (AsSMContractError, State (..), StateMachine (..),
                                                         TransitionResult (..), Void)
 import qualified Language.Plutus.Contract.StateMachine as SM
-import qualified Language.PlutusTx                     as PlutusTx
-import           Language.PlutusTx.Prelude             hiding (Applicative (..))
+import qualified PlutusTx                              as PlutusTx
+import           PlutusTx.Prelude                      hiding (Applicative (..))
 
 --   $multisig
 --   The n-out-of-m multisig contract works like a joint account of
@@ -58,7 +58,7 @@ import           Language.PlutusTx.Prelude             hiding (Applicative (..))
 --   and approval takes the form of signatures on transactions.
 --
 --   The multisig contract in
---   'Language.PlutusTx.Coordination.Contracts.MultiSig' expects n signatures on
+--   'PlutusTx.Coordination.Contracts.MultiSig' expects n signatures on
 --   a single transaction. This requires an off-chain communication channel. The
 --   multisig contract implemented in this module uses a proposal system that
 --   allows participants to propose payments and attach their signatures to

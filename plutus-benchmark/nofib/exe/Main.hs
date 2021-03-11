@@ -16,7 +16,6 @@ import           System.Exit                              (exitFailure)
 import           System.IO
 import           Text.PrettyPrint.ANSI.Leijen             (Doc, indent, line, string, text, vsep)
 
-import           Language.PlutusTx.Prelude                as TxPrelude hiding (fmap, mappend, (<$), (<$>), (<*>), (<>))
 import qualified Plutus.Benchmark.Clausify                as Clausify
 import qualified Plutus.Benchmark.Knights                 as Knights
 import qualified Plutus.Benchmark.LastPiece               as LastPiece
@@ -28,6 +27,7 @@ import           PlutusCore.Builtins
 import           PlutusCore.CBOR                          ()
 import qualified PlutusCore.Pretty                        as PLC
 import           PlutusCore.Universe
+import           PlutusTx.Prelude                         as TxPrelude hiding (fmap, mappend, (<$), (<$>), (<*>), (<>))
 import qualified UntypedPlutusCore                        as UPLC
 import           UntypedPlutusCore.Evaluation.Machine.Cek
 

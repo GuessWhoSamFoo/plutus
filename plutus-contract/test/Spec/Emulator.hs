@@ -33,11 +33,6 @@ import qualified Hedgehog
 import qualified Hedgehog.Gen                   as Gen
 import qualified Hedgehog.Range                 as Range
 import           Language.Plutus.Contract.Test  hiding (not)
-import qualified Language.PlutusTx              as PlutusTx
-import           Language.PlutusTx.AssocMap     as AssocMap
-import qualified Language.PlutusTx.Builtins     as Builtins
-import qualified Language.PlutusTx.Numeric      as P
-import qualified Language.PlutusTx.Prelude      as PlutusTx
 import           Ledger
 import qualified Ledger.Ada                     as Ada
 import           Ledger.Bytes                   as LedgerBytes
@@ -49,6 +44,11 @@ import           Ledger.Value                   (CurrencySymbol, Value (Value))
 import qualified Ledger.Value                   as Value
 import           Plutus.Trace                   (EmulatorTrace)
 import qualified Plutus.Trace                   as Trace
+import qualified PlutusTx                       as PlutusTx
+import           PlutusTx.AssocMap              as AssocMap
+import qualified PlutusTx.Builtins              as Builtins
+import qualified PlutusTx.Numeric               as P
+import qualified PlutusTx.Prelude               as PlutusTx
 import           Test.Tasty
 import           Test.Tasty.HUnit               (testCase)
 import qualified Test.Tasty.HUnit               as HUnit

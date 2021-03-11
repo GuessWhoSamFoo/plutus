@@ -19,9 +19,9 @@
 {-# LANGUAGE TypeOperators       #-}
 {-# LANGUAGE ViewPatterns        #-}
 {-# OPTIONS_GHC -fno-ignore-interface-pragmas #-}
-{-# OPTIONS -fplugin-opt Language.PlutusTx.Plugin:debug-context #-}
+{-# OPTIONS -fplugin-opt PlutusTx.Plugin:debug-context #-}
 
-module Language.PlutusTx.Coordination.Contracts.Crowdfunding (
+module PlutusTx.Coordination.Contracts.Crowdfunding (
     -- * Campaign parameters
       Campaign(..)
     , CrowdfundingSchema
@@ -54,8 +54,6 @@ import           GHC.Generics                      (Generic)
 
 import           Language.Plutus.Contract
 import qualified Language.Plutus.Contract.Typed.Tx as Typed
-import qualified Language.PlutusTx                 as PlutusTx
-import           Language.PlutusTx.Prelude         hiding (Applicative (..), Semigroup (..), return, (<$>), (>>), (>>=))
 import           Ledger                            (PubKeyHash, Slot, Validator, txId)
 import qualified Ledger                            as Ledger
 import qualified Ledger.Ada                        as Ada
@@ -69,6 +67,8 @@ import           Ledger.Value                      (Value)
 import qualified Ledger.Value                      as Value
 import           Plutus.Trace.Emulator             (ContractHandle, EmulatorTrace)
 import qualified Plutus.Trace.Emulator             as Trace
+import qualified PlutusTx                          as PlutusTx
+import           PlutusTx.Prelude                  hiding (Applicative (..), Semigroup (..), return, (<$>), (>>), (>>=))
 import           Prelude                           (Semigroup (..))
 import qualified Prelude                           as Haskell
 import           Schema                            (ToArgument, ToSchema)

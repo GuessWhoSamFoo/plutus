@@ -9,17 +9,17 @@
 {-# LANGUAGE TypeOperators         #-}
 {-# LANGUAGE UndecidableInstances  #-}
 {-# OPTIONS_GHC -Wno-orphans #-}
-module Language.PlutusTx.Lift.Instances () where
+module PlutusTx.Lift.Instances () where
 
-import qualified PlutusCore                   as PLC
+import qualified PlutusCore          as PLC
 
-import           Language.PlutusTx.Builtins
-import           Language.PlutusTx.Lift.Class
+import           PlutusTx.Builtins
+import           PlutusTx.Lift.Class
 
 import           PlutusIR
 import           PlutusIR.MkPir
 
-import qualified Data.ByteString              as BS
+import qualified Data.ByteString     as BS
 import           Data.Proxy
 
 -- Derived instances

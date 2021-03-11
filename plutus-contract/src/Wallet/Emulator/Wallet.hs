@@ -33,12 +33,12 @@ import qualified Data.Text                           as T
 import           Data.Text.Prettyprint.Doc
 import           GHC.Generics                        (Generic)
 import           Language.Plutus.Contract.Checkpoint (CheckpointLogMsg)
-import qualified Language.PlutusTx.Prelude           as PlutusTx
 import           Ledger
 import qualified Ledger.Ada                          as Ada
 import qualified Ledger.AddressMap                   as AM
 import qualified Ledger.Crypto                       as Crypto
 import qualified Ledger.Value                        as Value
+import qualified PlutusTx.Prelude                    as PlutusTx
 import           Prelude                             as P
 import           Servant.API                         (FromHttpApiData (..), ToHttpApiData (..))
 import qualified Wallet.API                          as WAPI
