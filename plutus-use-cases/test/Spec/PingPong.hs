@@ -4,10 +4,10 @@ module Spec.PingPong(tests, pingPongTrace, twoPartiesTrace) where
 
 import           Control.Monad                            (void)
 import           Data.Maybe                               (isNothing)
-import           Language.Plutus.Contract
-import           Language.Plutus.Contract.Test
+import           Plutus.Contract
+import           Plutus.Contract.Test
 
-import           Language.Plutus.Contract.StateMachine    (OnChainState)
+import           Plutus.Contract.StateMachine             (OnChainState)
 import qualified Plutus.Trace.Emulator                    as Trace
 import           PlutusTx.Coordination.Contracts.PingPong (Input, PingPongError, PingPongSchema, PingPongState)
 import qualified PlutusTx.Coordination.Contracts.PingPong as PingPong

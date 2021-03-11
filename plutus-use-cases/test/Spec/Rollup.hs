@@ -9,8 +9,8 @@ import           Data.ByteString.Lazy                         (ByteString)
 import qualified Data.ByteString.Lazy                         as LBS
 import           Data.Text.Encoding                           (encodeUtf8)
 
-import           Language.Plutus.Contract.Trace
 import           Ledger                                       (pubKeyHash)
+import           Plutus.Contract.Trace
 
 import           PlutusTx.Coordination.Contracts.Crowdfunding
 import           PlutusTx.Coordination.Contracts.Game

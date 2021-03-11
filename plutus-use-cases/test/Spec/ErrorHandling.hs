@@ -4,7 +4,7 @@
 module Spec.ErrorHandling(tests) where
 
 import           Control.Monad                                 (void)
-import           Language.Plutus.Contract.Test
+import           Plutus.Contract.Test
 
 import qualified Plutus.Trace.Emulator                         as Trace
 import           PlutusTx.Coordination.Contracts.ErrorHandling

@@ -29,8 +29,8 @@ import           Ledger.Typed.Scripts     (ScriptInstance)
 import qualified Ledger.Typed.Scripts     as Scripts
 import qualified PlutusTx                 as PlutusTx
 
-import           Language.Plutus.Contract as Contract
 import qualified Ledger.Constraints       as Constraints
+import           Plutus.Contract          as Contract
 
 mkValidator :: PubKeyHash -> () -> () -> ValidatorCtx -> Bool
 mkValidator pk' _ _ p = V.txSignedBy (valCtxTxInfo p) pk'

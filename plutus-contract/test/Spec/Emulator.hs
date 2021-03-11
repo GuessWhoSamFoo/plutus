@@ -32,7 +32,6 @@ import           Hedgehog                       (Property, forAll, property)
 import qualified Hedgehog
 import qualified Hedgehog.Gen                   as Gen
 import qualified Hedgehog.Range                 as Range
-import           Language.Plutus.Contract.Test  hiding (not)
 import           Ledger
 import qualified Ledger.Ada                     as Ada
 import           Ledger.Bytes                   as LedgerBytes
@@ -42,6 +41,7 @@ import qualified Ledger.Index                   as Index
 import           Ledger.Typed.Scripts           (wrapValidator)
 import           Ledger.Value                   (CurrencySymbol, Value (Value))
 import qualified Ledger.Value                   as Value
+import           Plutus.Contract.Test           hiding (not)
 import           Plutus.Trace                   (EmulatorTrace)
 import qualified Plutus.Trace                   as Trace
 import qualified PlutusTx                       as PlutusTx

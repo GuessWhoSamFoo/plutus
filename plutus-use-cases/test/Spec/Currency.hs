@@ -3,9 +3,9 @@
 module Spec.Currency(tests, currencyTrace) where
 
 import           Control.Monad                            (void)
-import           Language.Plutus.Contract
-import           Language.Plutus.Contract.Test
 import qualified Ledger
+import           Plutus.Contract
+import           Plutus.Contract.Test
 
 import qualified Plutus.Trace.Emulator                    as Trace
 import           PlutusTx.Coordination.Contracts.Currency (Currency)

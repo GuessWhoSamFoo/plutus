@@ -33,7 +33,7 @@ import           PlutusTx.Coordination.Contracts.PubKey (AsPubKeyError (..), Pub
 import qualified PlutusTx.Coordination.Contracts.PubKey as PK
 import           PlutusTx.Prelude                       hiding (Monoid (..), Semigroup (..))
 
-import           Language.Plutus.Contract               as Contract
+import           Plutus.Contract                        as Contract
 
 import           Ledger                                 (CurrencySymbol, PubKeyHash, TxId, TxOutRef (..), pubKeyHash,
                                                          scriptCurrencySymbol, txId)

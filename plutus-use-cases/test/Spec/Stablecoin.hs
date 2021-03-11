@@ -14,7 +14,6 @@ module Spec.Stablecoin(
 import           Control.Lens                               (preview)
 import           Control.Monad                              (void)
 import           Data.Maybe                                 (listToMaybe, mapMaybe)
-import           Language.Plutus.Contract.Test
 import           Ledger.Ada                                 (adaSymbol, adaToken)
 import qualified Ledger.Ada                                 as Ada
 import           Ledger.Address                             (Address)
@@ -22,6 +21,7 @@ import           Ledger.Oracle                              (Observation, Signed
 import           Ledger.Slot                                (Slot (..))
 import           Ledger.Typed.Scripts                       (scriptAddress)
 import           Ledger.Value
+import           Plutus.Contract.Test
 import           PlutusTx.Numeric                           (negate, one, zero)
 import           PlutusTx.Ratio                             as Ratio
 

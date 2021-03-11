@@ -23,10 +23,10 @@ import           Test.Tasty
 import           Test.Tasty.Golden                            (goldenVsString)
 import qualified Test.Tasty.HUnit                             as HUnit
 
-import           Language.Plutus.Contract                     hiding (runError)
-import           Language.Plutus.Contract.Test
 import qualified Ledger.Ada                                   as Ada
 import           Ledger.Slot                                  (Slot (..))
+import           Plutus.Contract                              hiding (runError)
+import           Plutus.Contract.Test
 import           Plutus.Trace.Emulator                        (ContractHandle (..), EmulatorTrace)
 import qualified Plutus.Trace.Emulator                        as Trace
 import qualified PlutusTx                                     as PlutusTx

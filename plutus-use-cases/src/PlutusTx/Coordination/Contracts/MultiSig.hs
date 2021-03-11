@@ -23,19 +23,19 @@ module PlutusTx.Coordination.Contracts.MultiSig
     , validate
     ) where
 
-import           Control.Monad                     (void)
-import           Data.Aeson                        (FromJSON, ToJSON)
-import           GHC.Generics                      (Generic)
-import           Language.Plutus.Contract
-import qualified Language.Plutus.Contract.Typed.Tx as Tx
+import           Control.Monad            (void)
+import           Data.Aeson               (FromJSON, ToJSON)
+import           GHC.Generics             (Generic)
 import           Ledger
-import qualified Ledger.Constraints                as Constraints
-import           Ledger.Contexts                   as V
-import qualified Ledger.Typed.Scripts              as Scripts
-import qualified PlutusTx                          as PlutusTx
-import           PlutusTx.Prelude                  hiding (Semigroup (..), foldMap)
+import qualified Ledger.Constraints       as Constraints
+import           Ledger.Contexts          as V
+import qualified Ledger.Typed.Scripts     as Scripts
+import           Plutus.Contract
+import qualified Plutus.Contract.Typed.Tx as Tx
+import qualified PlutusTx                 as PlutusTx
+import           PlutusTx.Prelude         hiding (Semigroup (..), foldMap)
 
-import           Prelude                           (Semigroup (..), foldMap)
+import           Prelude                  (Semigroup (..), foldMap)
 
 type MultiSigSchema =
     BlockchainActions

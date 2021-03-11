@@ -19,15 +19,15 @@ module PlutusTx.Coordination.Contracts.Prism.StateMachine(
 import           Data.Aeson                                       (FromJSON, ToJSON)
 import           Data.Hashable                                    (Hashable)
 import           GHC.Generics                                     (Generic)
-import           Language.Plutus.Contract.StateMachine            (State (..), StateMachine (..),
-                                                                   StateMachineClient (..), StateMachineInstance (..),
-                                                                   Void)
-import qualified Language.Plutus.Contract.StateMachine            as StateMachine
 import qualified Ledger.Constraints                               as Constraints
 import           Ledger.Constraints.TxConstraints                 (TxConstraints)
 import           Ledger.Crypto                                    (PubKeyHash)
 import qualified Ledger.Typed.Scripts                             as Scripts
 import           Ledger.Value                                     (TokenName, Value)
+import           Plutus.Contract.StateMachine                     (State (..), StateMachine (..),
+                                                                   StateMachineClient (..), StateMachineInstance (..),
+                                                                   Void)
+import qualified Plutus.Contract.StateMachine                     as StateMachine
 import qualified PlutusTx                                         as PlutusTx
 import           PlutusTx.Coordination.Contracts.Prism.Credential (Credential (..), CredentialAuthority (..))
 import qualified PlutusTx.Coordination.Contracts.Prism.Credential as Credential

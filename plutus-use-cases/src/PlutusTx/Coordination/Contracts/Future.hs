@@ -51,8 +51,6 @@ import qualified Control.Monad.Freer                          as Freer
 import qualified Control.Monad.Freer.Error                    as Freer
 import           Data.Aeson                                   (FromJSON, ToJSON)
 import           GHC.Generics                                 (Generic)
-import           Language.Plutus.Contract
-import           Language.Plutus.Contract.Util                (loopM)
 import           Ledger                                       (Address, Datum (..), PubKey, Slot (..), Validator,
                                                                ValidatorHash, pubKeyHash)
 import qualified Ledger
@@ -65,11 +63,13 @@ import           Ledger.Scripts                               (unitDatum)
 import           Ledger.Tokens
 import qualified Ledger.Typed.Scripts                         as Scripts
 import           Ledger.Value                                 as Value
+import           Plutus.Contract
+import           Plutus.Contract.Util                         (loopM)
 import qualified PlutusTx                                     as PlutusTx
 import           PlutusTx.Prelude
 
-import           Language.Plutus.Contract.StateMachine        (AsSMContractError, State (..), StateMachine (..), Void)
-import qualified Language.Plutus.Contract.StateMachine        as SM
+import           Plutus.Contract.StateMachine                 (AsSMContractError, State (..), StateMachine (..), Void)
+import qualified Plutus.Contract.StateMachine                 as SM
 import qualified Plutus.Trace.Emulator                        as Trace
 import qualified PlutusTx.Coordination.Contracts.Currency     as Currency
 import           PlutusTx.Coordination.Contracts.Escrow       (AsEscrowError (..), EscrowError, EscrowParams (..),

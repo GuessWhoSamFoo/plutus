@@ -39,12 +39,12 @@ import           Plutus.PAB.Types                            (PABError (..))
 
 import           Control.Monad.Freer.Extras.Log              (LogMsg, logDebug)
 
-import           Language.Plutus.Contract                    (BlockchainActions, Contract, ContractError)
-import           Language.Plutus.Contract.Effects.RPC        (RPCClient)
-import           Language.Plutus.Contract.Schema             (Event, Handlers, Input, Output)
-import           Language.Plutus.Contract.State              (ContractRequest, ContractResponse (..))
-import qualified Language.Plutus.Contract.State              as ContractState
 import           Playground.Schema                           (endpointsToSchemas)
+import           Plutus.Contract                             (BlockchainActions, Contract, ContractError)
+import           Plutus.Contract.Effects.RPC                 (RPCClient)
+import           Plutus.Contract.Schema                      (Event, Handlers, Input, Output)
+import           Plutus.Contract.State                       (ContractRequest, ContractResponse (..))
+import qualified Plutus.Contract.State                       as ContractState
 import qualified Plutus.PAB.Effects.ContractTest.AtomicSwap  as Contracts.AtomicSwap
 import qualified Plutus.PAB.Effects.ContractTest.PayToWallet as Contracts.PayToWallet
 import qualified PlutusTx.Coordination.Contracts.Currency    as Contracts.Currency

@@ -19,11 +19,11 @@ module PlutusTx.Coordination.Contracts.Prism.CredentialManager(
 
 import           Data.Aeson                                         (FromJSON, ToJSON)
 import           GHC.Generics                                       (Generic)
-import           Language.Plutus.Contract
-import           Language.Plutus.Contract.Effects.RPC
-import           Language.Plutus.Contract.StateMachine              (InvalidTransition, SMContractError, StateMachine,
-                                                                     StateMachineTransition (..), mkStep)
 import           Ledger.Constraints                                 (ScriptLookups, TxConstraints (..))
+import           Plutus.Contract
+import           Plutus.Contract.Effects.RPC
+import           Plutus.Contract.StateMachine                       (InvalidTransition, SMContractError, StateMachine,
+                                                                     StateMachineTransition (..), mkStep)
 import           PlutusTx.Coordination.Contracts.Prism.StateMachine (IDAction (PresentCredential), IDState,
                                                                      UserCredential (..))
 import qualified PlutusTx.Coordination.Contracts.Prism.StateMachine as StateMachine

@@ -26,7 +26,7 @@ import qualified Ledger.Oracle                          as Oracle
 import           Ledger.Slot                            (Slot)
 import           Ledger.Value                           (Value, scale)
 
-import           Language.Plutus.Contract.Test
+import           Plutus.Contract.Test
 import           Plutus.Trace.Emulator                  (ContractHandle, EmulatorTrace)
 import qualified Plutus.Trace.Emulator                  as Trace
 import qualified PlutusTx                               as PlutusTx

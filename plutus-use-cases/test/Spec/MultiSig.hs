@@ -5,12 +5,12 @@
 module Spec.MultiSig(tests, failingTrace, succeedingTrace) where
 
 import           Control.Monad                            (void)
-import           Language.Plutus.Contract                 (Contract, ContractError)
-import           Language.Plutus.Contract.Test
 import qualified Ledger
 import qualified Ledger.Ada                               as Ada
 import           Ledger.Index                             (ValidationError (ScriptFailure))
 import           Ledger.Scripts                           (ScriptError (EvaluationError))
+import           Plutus.Contract                          (Contract, ContractError)
+import           Plutus.Contract.Test
 import           Plutus.Trace.Emulator                    (EmulatorTrace)
 import qualified Plutus.Trace.Emulator                    as Trace
 import qualified PlutusTx                                 as PlutusTx

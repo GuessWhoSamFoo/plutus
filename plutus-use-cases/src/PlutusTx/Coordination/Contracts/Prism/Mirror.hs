@@ -20,13 +20,13 @@ module PlutusTx.Coordination.Contracts.Prism.Mirror(
 import           Control.Monad                                      (forever, void)
 import           Data.Aeson                                         (FromJSON, ToJSON)
 import           GHC.Generics                                       (Generic)
-import           Language.Plutus.Contract
-import           Language.Plutus.Contract.StateMachine              (SMContractError, runInitialise, runStep)
 import           Ledger                                             (txId)
 import qualified Ledger.Constraints                                 as Constraints
 import           Ledger.Crypto                                      (PubKeyHash, pubKeyHash)
 import qualified Ledger.Typed.Scripts                               as Scripts
 import           Ledger.Value                                       (TokenName)
+import           Plutus.Contract
+import           Plutus.Contract.StateMachine                       (SMContractError, runInitialise, runStep)
 import           PlutusTx.Coordination.Contracts.Prism.Credential   (Credential (..), CredentialAuthority (..))
 import qualified PlutusTx.Coordination.Contracts.Prism.Credential   as Credential
 import           PlutusTx.Coordination.Contracts.Prism.StateMachine as StateMachine

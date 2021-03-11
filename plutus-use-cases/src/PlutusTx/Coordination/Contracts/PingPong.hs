@@ -29,20 +29,20 @@ module PlutusTx.Coordination.Contracts.PingPong(
     ) where
 
 import           Control.Lens
-import           Control.Monad                         (void)
-import           Data.Aeson                            (FromJSON, ToJSON)
-import           GHC.Generics                          (Generic)
-import qualified Ledger.Ada                            as Ada
-import           Ledger.Constraints                    (TxConstraints)
-import qualified Ledger.Typed.Scripts                  as Scripts
-import           Ledger.Typed.Tx                       (tyTxOutData)
-import qualified PlutusTx                              as PlutusTx
-import           PlutusTx.Prelude                      hiding (Applicative (..), check)
+import           Control.Monad                (void)
+import           Data.Aeson                   (FromJSON, ToJSON)
+import           GHC.Generics                 (Generic)
+import qualified Ledger.Ada                   as Ada
+import           Ledger.Constraints           (TxConstraints)
+import qualified Ledger.Typed.Scripts         as Scripts
+import           Ledger.Typed.Tx              (tyTxOutData)
+import qualified PlutusTx                     as PlutusTx
+import           PlutusTx.Prelude             hiding (Applicative (..), check)
 
-import           Language.Plutus.Contract.StateMachine (AsSMContractError (..), OnChainState, State (..), Void)
-import qualified Language.Plutus.Contract.StateMachine as SM
+import           Plutus.Contract.StateMachine (AsSMContractError (..), OnChainState, State (..), Void)
+import qualified Plutus.Contract.StateMachine as SM
 
-import           Language.Plutus.Contract
+import           Plutus.Contract
 
 data PingPongState = Pinged | Ponged | Stopped
     deriving stock (Show, Generic)

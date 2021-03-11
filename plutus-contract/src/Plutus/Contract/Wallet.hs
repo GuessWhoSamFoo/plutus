@@ -8,7 +8,7 @@
 {-# LANGUAGE TypeApplications  #-}
 -- | Turn 'UnbalancedTx' values into transactions using the
 --   wallet API.
-module Language.Plutus.Contract.Wallet(
+module Plutus.Contract.Wallet(
       balanceWallet
     , balanceTx
     , handleTx

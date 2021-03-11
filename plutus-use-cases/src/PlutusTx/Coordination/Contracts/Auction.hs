@@ -21,25 +21,25 @@ module PlutusTx.Coordination.Contracts.Auction(
     ) where
 
 
-import           Data.Aeson                            (FromJSON, ToJSON)
-import           Data.Semigroup                        (Last (..))
-import           GHC.Generics                          (Generic)
-import           Language.Plutus.Contract
-import           Language.Plutus.Contract.StateMachine (State (..), StateMachine (..), StateMachineClient,
-                                                        StateMachineInstance (..), Void, WaitingResult (..))
-import qualified Language.Plutus.Contract.StateMachine as SM
-import           Language.Plutus.Contract.Util         (loopM)
-import           Ledger                                (Ada, PubKeyHash, Slot, Value)
+import           Data.Aeson                       (FromJSON, ToJSON)
+import           Data.Semigroup                   (Last (..))
+import           GHC.Generics                     (Generic)
+import           Ledger                           (Ada, PubKeyHash, Slot, Value)
 import qualified Ledger
-import qualified Ledger.Ada                            as Ada
-import qualified Ledger.Constraints                    as Constraints
-import           Ledger.Constraints.TxConstraints      (TxConstraints)
-import qualified Ledger.Interval                       as Interval
-import qualified Ledger.Typed.Scripts                  as Scripts
-import           Ledger.Typed.Tx                       (TypedScriptTxOut (..))
-import qualified PlutusTx                              as PlutusTx
+import qualified Ledger.Ada                       as Ada
+import qualified Ledger.Constraints               as Constraints
+import           Ledger.Constraints.TxConstraints (TxConstraints)
+import qualified Ledger.Interval                  as Interval
+import qualified Ledger.Typed.Scripts             as Scripts
+import           Ledger.Typed.Tx                  (TypedScriptTxOut (..))
+import           Plutus.Contract
+import           Plutus.Contract.StateMachine     (State (..), StateMachine (..), StateMachineClient,
+                                                   StateMachineInstance (..), Void, WaitingResult (..))
+import qualified Plutus.Contract.StateMachine     as SM
+import           Plutus.Contract.Util             (loopM)
+import qualified PlutusTx                         as PlutusTx
 import           PlutusTx.Prelude
-import qualified Prelude                               as Haskell
+import qualified Prelude                          as Haskell
 
 -- | Definition of an auction
 data AuctionParams

@@ -24,10 +24,10 @@ import           PlutusTx.Coordination.Contracts.Escrow (EscrowParams (..))
 import qualified PlutusTx.Coordination.Contracts.Escrow as Escrow
 import           Schema                                 (ToSchema)
 
-import           Language.Plutus.Contract
 import           Ledger                                 (CurrencySymbol, PubKey, Slot, TokenName, Value)
 import qualified Ledger
 import qualified Ledger.Value                           as Value
+import           Plutus.Contract
 import           Wallet.Emulator.Wallet                 (Wallet, walletPubKey)
 
 -- | Describes an exchange of two

@@ -33,23 +33,23 @@ module PlutusTx.Coordination.Contracts.GameStateMachine(
     , token
     ) where
 
-import           Control.Monad                         (void)
-import           Data.Aeson                            (FromJSON, ToJSON)
-import           GHC.Generics                          (Generic)
-import           Ledger                                hiding (to)
-import           Ledger.Constraints                    (TxConstraints)
-import qualified Ledger.Constraints                    as Constraints
-import qualified Ledger.Typed.Scripts                  as Scripts
-import qualified Ledger.Value                          as V
-import qualified PlutusTx                              as PlutusTx
-import           PlutusTx.Prelude                      hiding (Applicative (..), check)
+import           Control.Monad                (void)
+import           Data.Aeson                   (FromJSON, ToJSON)
+import           GHC.Generics                 (Generic)
+import           Ledger                       hiding (to)
+import           Ledger.Constraints           (TxConstraints)
+import qualified Ledger.Constraints           as Constraints
+import qualified Ledger.Typed.Scripts         as Scripts
+import qualified Ledger.Value                 as V
+import qualified PlutusTx                     as PlutusTx
+import           PlutusTx.Prelude             hiding (Applicative (..), check)
 
-import qualified Data.ByteString.Char8                 as C
+import qualified Data.ByteString.Char8        as C
 
-import           Language.Plutus.Contract.StateMachine (State (..), Void)
-import qualified Language.Plutus.Contract.StateMachine as SM
+import           Plutus.Contract.StateMachine (State (..), Void)
+import qualified Plutus.Contract.StateMachine as SM
 
-import           Language.Plutus.Contract
+import           Plutus.Contract
 
 newtype HashedString = HashedString ByteString
     deriving newtype (PlutusTx.IsData, Eq)

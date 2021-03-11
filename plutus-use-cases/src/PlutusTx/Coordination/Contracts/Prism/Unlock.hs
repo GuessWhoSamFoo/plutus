@@ -27,15 +27,15 @@ module PlutusTx.Coordination.Contracts.Prism.Unlock(
 
 import           Data.Aeson                                              (FromJSON, ToJSON)
 import           GHC.Generics                                            (Generic)
-import           Language.Plutus.Contract
-import           Language.Plutus.Contract.Effects.RPC                    (HasRPCClient, RPCCallError, RPCClient,
-                                                                          RPCResponse, Retries (..), callRPC)
 import           Ledger                                                  (pubKeyHash, txId)
 import qualified Ledger.Ada                                              as Ada
 import           Ledger.Constraints                                      (SomeLookupsAndConstraints (..))
 import qualified Ledger.Constraints                                      as Constraints
 import           Ledger.Crypto                                           (PubKeyHash)
 import           Ledger.Value                                            (TokenName)
+import           Plutus.Contract
+import           Plutus.Contract.Effects.RPC                             (HasRPCClient, RPCCallError, RPCClient,
+                                                                          RPCResponse, Retries (..), callRPC)
 import           PlutusTx.Coordination.Contracts.Prism.Credential        (Credential)
 import qualified PlutusTx.Coordination.Contracts.Prism.Credential        as Credential
 import           PlutusTx.Coordination.Contracts.Prism.CredentialManager (CredentialManager,

@@ -36,7 +36,7 @@ import qualified Codec.Serialise                       as Serialise
 import           Language.Haskell.Interpreter          (Extension (OverloadedStrings), MonadInterpreter,
                                                         OptionVal ((:=)), as, interpret, languageExtensions,
                                                         runInterpreter, set, setImports)
-import           Language.Plutus.Contract.Test         as T
+import           Plutus.Contract.Test                  as T
 import qualified Plutus.Trace.Emulator                 as Trace
 import qualified PlutusTx.AssocMap                     as AssocMap
 import           PlutusTx.Lattice

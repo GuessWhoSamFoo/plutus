@@ -9,11 +9,11 @@ import           Test.Tasty
 import           Control.Monad                                (void)
 import           Control.Monad.Freer                          (run)
 import           Control.Monad.Freer.Error                    (runError)
-import           Language.Plutus.Contract                     (Contract)
-import           Language.Plutus.Contract.Test
 import qualified Ledger
 import qualified Ledger.Ada                                   as Ada
 import           Ledger.Value                                 (TokenName, Value)
+import           Plutus.Contract                              (Contract)
+import           Plutus.Contract.Test
 import qualified Streaming.Prelude                            as S
 import           Wallet.Emulator.Stream                       (foldEmulatorStreamM, takeUntilSlot)
 

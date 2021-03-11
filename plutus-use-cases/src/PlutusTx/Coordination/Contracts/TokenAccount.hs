@@ -45,11 +45,10 @@ import qualified Data.Map                                 as Map
 import           Data.Text.Prettyprint.Doc
 import           GHC.Generics                             (Generic)
 
-import           Language.Plutus.Contract
-import           Language.Plutus.Contract.Constraints
+import           Plutus.Contract
+import           Plutus.Contract.Constraints
 import qualified PlutusTx                                 as PlutusTx
 
-import qualified Language.Plutus.Contract.Typed.Tx        as TypedTx
 import           Ledger                                   (Address, PubKeyHash, Tx, TxOutTx (..), ValidatorHash)
 import qualified Ledger                                   as Ledger
 import qualified Ledger.Constraints                       as Constraints
@@ -59,6 +58,7 @@ import           Ledger.Typed.Scripts                     (ScriptType (..))
 import qualified Ledger.Typed.Scripts                     as Scripts
 import           Ledger.Value                             (CurrencySymbol, TokenName, Value)
 import qualified Ledger.Value                             as Value
+import qualified Plutus.Contract.Typed.Tx                 as TypedTx
 
 import qualified PlutusTx.Coordination.Contracts.Currency as Currency
 

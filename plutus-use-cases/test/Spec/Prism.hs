@@ -5,10 +5,10 @@
 module Spec.Prism(tests, prismTrace) where
 
 import           Control.Monad                                    (void)
-import           Language.Plutus.Contract.Test
 import qualified Ledger.Ada                                       as Ada
 import           Ledger.Crypto                                    (pubKeyHash)
 import           Ledger.Value                                     (TokenName)
+import           Plutus.Contract.Test
 
 import           Test.Tasty
 

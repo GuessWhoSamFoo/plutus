@@ -32,11 +32,6 @@ import           GHC.Generics                             (Generic)
 import           Language.Marlowe.Semantics               hiding (Contract)
 import qualified Language.Marlowe.Semantics               as Marlowe
 import           Language.Marlowe.Util                    (extractContractRoles)
-import           Language.Plutus.Contract
-import           Language.Plutus.Contract.StateMachine    (AsSMContractError (..), StateMachine (..),
-                                                           StateMachineClient (..), StateMachineInstance (..), Void,
-                                                           WaitingResult (..))
-import qualified Language.Plutus.Contract.StateMachine    as SM
 import           Ledger                                   (Address (..), CurrencySymbol, Datum (..), PubKeyHash,
                                                            Slot (..), TokenName, TxOutTx (..), ValidatorCtx (..),
                                                            ValidatorHash, mkValidatorScript, pubKeyHash, txOutDatum,
@@ -49,6 +44,11 @@ import           Ledger.Scripts                           (Validator, datumHash,
 import qualified Ledger.Typed.Scripts                     as Scripts
 import           Ledger.Typed.Tx                          (TypedScriptTxOut (..), tyTxOutData)
 import qualified Ledger.Value                             as Val
+import           Plutus.Contract
+import           Plutus.Contract.StateMachine             (AsSMContractError (..), StateMachine (..),
+                                                           StateMachineClient (..), StateMachineInstance (..), Void,
+                                                           WaitingResult (..))
+import qualified Plutus.Contract.StateMachine             as SM
 import qualified PlutusTx                                 as PlutusTx
 import qualified PlutusTx.AssocMap                        as AssocMap
 import qualified PlutusTx.Coordination.Contracts.Currency as Currency

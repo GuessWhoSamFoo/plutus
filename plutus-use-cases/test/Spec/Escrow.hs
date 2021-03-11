@@ -4,11 +4,11 @@ module Spec.Escrow(tests, redeemTrace, redeem2Trace, refundTrace) where
 
 import           Control.Monad                          (void)
 
-import           Language.Plutus.Contract
-import           Language.Plutus.Contract.Test
 import           Ledger                                 (pubKeyHash)
 import qualified Ledger.Ada                             as Ada
 import qualified Ledger.Typed.Scripts                   as Scripts
+import           Plutus.Contract
+import           Plutus.Contract.Test
 import qualified Spec.Lib                               as Lib
 
 import qualified Plutus.Trace.Emulator                  as Trace

@@ -21,7 +21,7 @@ import qualified Ledger.Ada                                           as Ada
 import qualified Ledger.Typed.Scripts                                 as Scripts
 import qualified Wallet.Emulator                                      as EM
 
-import           Language.Plutus.Contract.Test
+import           Plutus.Contract.Test
 import           Plutus.Trace.Emulator                                (EmulatorTrace)
 import qualified Plutus.Trace.Emulator                                as Trace
 import qualified PlutusTx                                             as PlutusTx

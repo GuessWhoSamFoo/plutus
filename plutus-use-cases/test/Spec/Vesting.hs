@@ -21,7 +21,7 @@ import qualified PlutusTx                                as PlutusTx
 import           PlutusTx.Coordination.Contracts.Vesting
 import qualified PlutusTx.Numeric                        as Numeric
 
-import           Language.Plutus.Contract.Test
+import           Plutus.Contract.Test
 import           Plutus.Trace.Emulator                   (EmulatorTrace)
 import qualified Plutus.Trace.Emulator                   as Trace
 import           Prelude                                 hiding (not)

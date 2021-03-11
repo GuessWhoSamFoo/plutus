@@ -11,13 +11,13 @@ import           Data.Either                                  (fromRight)
 import           Data.Text                                    (Text)
 
 import qualified Language.Marlowe                             as Marlowe
-import           Language.Plutus.Contract.Trace
 import qualified Ledger                                       as Ledger
 import qualified Ledger.Ada                                   as Ada
 import           Ledger.Crypto
 import qualified Ledger.Scripts                               as Plutus
 import qualified Ledger.Typed.Scripts                         as Plutus
 import           Ledger.Value
+import           Plutus.Contract.Trace
 import           PlutusCore                                   (DefaultFun (..), runQuoteT)
 import           PlutusCore.Universe
 import qualified PlutusTx.Coordination.Contracts.Crowdfunding as Crowdfunding

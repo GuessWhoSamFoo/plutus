@@ -7,9 +7,9 @@ module Spec.Game
     ) where
 
 import           Control.Monad                        (void)
-import           Language.Plutus.Contract             (Contract, ContractError)
-import           Language.Plutus.Contract.Test
 import           Ledger.Ada                           (adaValueOf)
+import           Plutus.Contract                      (Contract, ContractError)
+import           Plutus.Contract.Test
 import           Plutus.Trace.Emulator                (ContractInstanceTag)
 import qualified Plutus.Trace.Emulator                as Trace
 import qualified PlutusTx                             as PlutusTx

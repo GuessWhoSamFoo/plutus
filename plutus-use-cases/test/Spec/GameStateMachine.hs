@@ -14,10 +14,10 @@ import qualified Spec.Lib                                         as Lib
 import qualified PlutusTx                                         as PlutusTx
 
 import           Control.Monad                                    (void)
-import           Language.Plutus.Contract.Test
 import qualified Ledger.Ada                                       as Ada
 import qualified Ledger.Typed.Scripts                             as Scripts
 import           Ledger.Value                                     (Value)
+import           Plutus.Contract.Test
 import           Plutus.Trace.Emulator                            (EmulatorTrace)
 import qualified Plutus.Trace.Emulator                            as Trace
 import           PlutusTx.Coordination.Contracts.GameStateMachine as G

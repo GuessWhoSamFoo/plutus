@@ -15,7 +15,6 @@ import           Data.Kind
 import           Data.Void
 
 import           PlutusTx
-import qualified PlutusTx                  as PlutusTx
 import           PlutusTx.Prelude
 
 import           Plutus.V1.Ledger.Contexts (PolicyCtx (..), TxInfo (..))

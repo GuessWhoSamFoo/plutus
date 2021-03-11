@@ -73,7 +73,7 @@ import           PlutusTx.Coordination.Contracts.Prism.Mirror
 import           PlutusTx.Coordination.Contracts.Prism.StateMachine
 import           PlutusTx.Coordination.Contracts.Prism.Unlock
 
-import           Language.Plutus.Contract
+import           Plutus.Contract
 
 -- | The roles that we pass to 'contract'.
 data Role

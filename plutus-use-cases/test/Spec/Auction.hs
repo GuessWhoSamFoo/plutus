@@ -7,13 +7,13 @@ import           Control.Lens
 import           Control.Monad                           (void)
 import           Data.Semigroup                          (Last (..))
 
-import           Language.Plutus.Contract
-import           Language.Plutus.Contract.Test
 import           Ledger                                  (Ada, Value, pubKeyHash)
 import qualified Ledger.Ada                              as Ada
+import           Plutus.Contract
+import           Plutus.Contract.Test
 
-import qualified Language.Plutus.Contract.StateMachine   as SM
 import qualified Ledger.Value                            as Value
+import qualified Plutus.Contract.StateMachine            as SM
 import qualified Plutus.Trace.Emulator                   as Trace
 import           PlutusTx.Coordination.Contracts.Auction
 import           PlutusTx.Monoid                         (inv)
