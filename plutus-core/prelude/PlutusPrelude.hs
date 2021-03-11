@@ -140,7 +140,7 @@ deriving via PrettyCommon (Either a b)
     instance PrettyDefaultBy config (Either a b) => PrettyBy config (Either a b)
 
 (<<$>>) :: (Functor f1, Functor f2) => (a -> b) -> f1 (f2 a) -> f1 (f2 b)
-(<<$>>) f = getCompose . fmap f . Compose
+(<<$>>) f x = getCompose . fmap f . Compose $ x
 
 (<<*>>) :: (Applicative f1, Applicative f2) => f1 (f2 (a -> b)) -> f1 (f2 a) -> f1 (f2 b)
 f <<*>> a = getCompose $ Compose f <*> Compose a
