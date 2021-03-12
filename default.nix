@@ -21,7 +21,7 @@
 , enableHaskellProfiling ? false
 }:
 let
-  inherit (packages) pkgs plutus;
+  inherit (packages) pkgs plutus sources;
   inherit (pkgs) lib haskell-nix;
   inherit (plutus) haskell iohkNix git-rev set-git-rev agdaPackages;
   inherit (plutus) easyPS sphinxcontrib-haddock;
@@ -95,4 +95,33 @@ rec {
   deployment = pkgs.callPackage ./deployment {
     inherit plutus marlowe-playground plutus-playground;
   };
+
+  # Build the shell expression to be sure it works on all platforms
+  #
+  # The shell should never depend on any of our Haskell packages, which can
+  # sometimes happen by accident. In practice, everything depends transitively
+  # on 'plutus-core', so this does the job.
+  # FIXME: this should simply be set on the main shell derivation, but this breaks
+  # lorri: https://github.com/target/lorri/issues/489. In the mean time, we set it
+  # only on the CI version, so that we still catch it, but lorri doesn't see it.
+  shell = (import ./shell.nix { inherit packages; }).overrideAttrs (attrs: attrs // {
+    disallowedRequisites = [ plutus.haskell.packages.plutus-core.components.library ];
+  });
+
+  # WIP to make a VS Code devcontainer that can be used for working on plutus code
+  #   docker load < $(nix-build --system x86_64-linux -A devcontainer)
+  # In VS Code install:
+  #   https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers
+  devcontainer =
+    pkgs.callPackage (import ./devcontainer) {
+      name = "plutus-devcontainer";
+      tag = "latest";
+      nixpkgsPath = pkgs.path;
+      extraContents = [
+        shell.ghc
+        plutus.haskell-language-server
+        plutus.cabal-install
+        pkgs.zsh
+      ];
+    };
 }

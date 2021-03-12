@@ -1,4 +1,16 @@
 {
+    "docker-nixpkgs": {
+        "branch": "master",
+        "description": "docker images from nixpkgs [maintainer=@zimbatm]",
+        "homepage": "https://hub.docker.com/u/nixpkgs",
+        "owner": "nix-community",
+        "repo": "docker-nixpkgs",
+        "rev": "0929c8c531f71197534ee2e2ff33d7a5648b9f6e",
+        "sha256": "0kb7y1593a5ddcj37igv61cb7zh58nw1y7fc6a0kxbfmamry3g4p",
+        "type": "tarball",
+        "url": "https://github.com/nix-community/docker-nixpkgs/archive/0929c8c531f71197534ee2e2ff33d7a5648b9f6e.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "easy-purescript-nix": {
         "branch": "master",
         "builtin": false,
