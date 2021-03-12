@@ -1,4 +1,4 @@
-{ pkgs, gitignore-nix, set-git-rev, haskell, webCommon, webCommonPlutus, webCommonPlayground, buildPursPackage, buildNodeModules, filterNpm }:
+{ pkgs, docs, python3, gitignore-nix, set-git-rev, haskell, webCommon, webCommonPlutus, webCommonPlayground, buildPursPackage, buildNodeModules, filterNpm }:
 let
   playground-exe = set-git-rev haskell.packages.plutus-playground-server.components.exes.plutus-playground-server;
 
@@ -42,6 +42,17 @@ let
     $(nix-build --quiet --no-build-output ../default.nix -A plutus-playground.server-invoker)/bin/plutus-playground webserver
   '';
 
+  # For dev usage
+  serve-docs =
+    let
+      inherit docs;
+    in
+    pkgs.writeShellScriptBin "serve-docs" ''
+      cd ${docs.site} && \
+      ${python3}/bin/python3 -m http.server 8002
+    '';
+
+
   cleanSrc = gitignore-nix.gitignoreSource ./.;
 
   nodeModules = buildNodeModules {
@@ -71,5 +82,5 @@ let
   };
 in
 {
-  inherit client server-invoker generated-purescript generate-purescript start-backend;
+  inherit client server-invoker generated-purescript generate-purescript start-backend serve-docs;
 }

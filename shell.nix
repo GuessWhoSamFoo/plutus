@@ -70,6 +70,7 @@ let
     marlowe-playground.start-backend
     plutus-playground.generate-purescript
     plutus-playground.start-backend
+    plutus-playground.serve-docs
     plutus-pab.generate-purescript
     plutus-pab.migrate
     plutus-pab.start-backend
