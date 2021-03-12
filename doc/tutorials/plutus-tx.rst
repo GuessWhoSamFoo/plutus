@@ -86,7 +86,7 @@ immediately call :hsobj:`PlutusTx.TH.compile`, and then splice the result back i
 Writing basic PlutusTx programs
 -------------------------------
 
-.. literalinclude:: BasicPlutusTx.has
+.. literalinclude:: BasicPlutusTx.hs
    :start-after: BLOCK1
    :end-before: BLOCK2
 
@@ -98,7 +98,7 @@ This simple program just evaluates to the integer ``1``.
     might look unfamiliar, since this syntax is used for the 'assembly language, which means you don't need to inspect
     the compiler's output. But for the purpose of this tutorial, it is useful to understand what is happening.
 
-.. literalinclude:: BasicPlutusTx.has
+.. literalinclude:: BasicPlutusTx.hs
    :start-after: BLOCK2
    :end-before: BLOCK3
 
@@ -114,7 +114,7 @@ programs are written.
 This is a slightly more complex program. It includes the identity function on
 integers.
 
-.. literalinclude:: BasicPlutusTx.has
+.. literalinclude:: BasicPlutusTx.hs
    :start-after: BLOCK3
    :end-before: BLOCK4
 
@@ -127,13 +127,13 @@ You can use functions inside your expression. In practice, you will
 usually want to define the entirety of your Plutus Tx program as a
 definition outside the quote, and then simply call it inside the quote.
 
-.. literalinclude:: BasicPlutusTx.has
+.. literalinclude:: BasicPlutusTx.hs
    :start-after: BLOCK4
    :end-before: BLOCK5
 
 We can use normal Haskell datatypes and pattern matching freely:
 
-.. literalinclude:: BasicPlutusTx.has
+.. literalinclude:: BasicPlutusTx.hs
    :start-after: BLOCK5
    :end-before: BLOCK6
 
@@ -143,7 +143,7 @@ the Haskell ``Prelude``. This works for your own datatypes too!
 
 Here’s a small example with a datatype representing a potentially open-ended end date.
 
-.. literalinclude:: BasicPlutusTx.has
+.. literalinclude:: BasicPlutusTx.hs
    :start-after: BLOCK6
    :end-before: BLOCK7
 
@@ -171,7 +171,7 @@ you should be able to use most typeclass functions in your Plutus Tx programs.
 For example, here is a version of the ``pastEnd`` function using ``<``.
 This will be compiled to exactly the same code as the previous definition.
 
-.. literalinclude:: BasicPlutusTx.has
+.. literalinclude:: BasicPlutusTx.hs
    :start-after: BLOCK7
    :end-before: BLOCK8
 
@@ -230,7 +230,7 @@ the external code that uses it.
 
 In this example, we add an add-one function.
 
-.. literalinclude:: BasicPlutusTx.has
+.. literalinclude:: BasicPlutusTx.hs
    :start-after: BLOCK8
    :end-before: BLOCK9
 
@@ -239,7 +239,7 @@ program that computes to ``5``. We need to *lift* the argument (``4``)
 from Haskell to Plutus Core, and then we need to apply the function to
 it.
 
-.. literalinclude:: BasicPlutusTx.has
+.. literalinclude:: BasicPlutusTx.hs
    :start-after: BLOCK9
    :end-before: BLOCK10
 
@@ -261,6 +261,6 @@ compiled the addition into a built-in).
 Here’s an example with our custom datatype. The output is the encoded
 version of ``False``.
 
-.. literalinclude:: BasicPlutusTx.has
+.. literalinclude:: BasicPlutusTx.hs
    :start-after: BLOCK10
    :end-before: BLOCK11
